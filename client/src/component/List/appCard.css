@@ -1,0 +1,51 @@
+
+.app-card {
+    display: flex;
+    border: 1px solid #ccccccda;
+    background-color: whitesmoke;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .image-frame {
+    /* border: 1px solid red; */
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+  .image-frame img {
+    width: 30vw;
+    height: 40vh;
+    object-fit: cover;
+
+  }
+
+  .button-container {
+    margin-top: 10px;
+  }
+
+  button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+.flex-it{
+display: flex;
+border: 1px solid #ccc;
+
+
+}
+.img-container{
+width: 10rem;
+}
+.profile-img{
+width: 100%;
+}
