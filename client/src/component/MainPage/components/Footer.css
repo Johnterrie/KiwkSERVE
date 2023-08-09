@@ -1,0 +1,26 @@
+#footer{
+    max-width: 1300px;
+    margin: 10px auto;
+    border:1px solid ;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    background-color:rgb(62, 60, 60);
+    color: white;
+    padding: 0px 120px;
+}
+#top{
+    background-color:rgb(62, 60, 60) ;
+    line-height:2rem;
+    color: rgb(200, 200, 91);
+    font-size: 20px;
+}
+ a{
+    text-decoration:none ;
+    color:white ;
+}
+
+a:hover{
+    color: rgb(190, 190, 127);
+    font-size:17px ;
+}

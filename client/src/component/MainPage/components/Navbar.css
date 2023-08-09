@@ -1,0 +1,43 @@
+#nav{
+    background-color: beige;
+    margin-bottom:-8px ;
+    margin-top:-5px;
+    padding:6px ;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+#navbarScrollingDropdown:hover{
+    color: green;
+}
+#btnbecome:hover{
+color: white;
+}
+#top{
+    background-color: black;
+}
+.me-2{
+position: relative;
+} 
+.search-btn{
+    position:absolute;
+    top: 11px;
+    right:2px;
+} 
+#navbarScrollingDropdown{
+    font-size: 20px;
+}
+
+.signup{
+    margin-right: 10px;
+}
+#btnbecome{
+    border:1px solid green;
+    margin-right: 7px;
+    width: 300px;
+    border-radius:5px ;
+     background-color: gray; 
+} 
+#btnbecome:hover{
+    background-color: green;
+}
