@@ -11,7 +11,7 @@ export const Register = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+        console.log(e)
     }
 
     return (
@@ -19,7 +19,7 @@ export const Register = (props) => {
             <h2>Register</h2>
             <form className="register-form" onSubmit={handleSubmit}>
                 <label htmlFor="name"> <FontAwesomeIcon icon={faUser} className="inputIcon" /> Full name</label>
-                <input value={name} name="name" id="name" placeholder="full name" />
+                <input value={name} onChange={(e) => setName(e.target.value)} name="name" id="name" placeholder="full name" />
                 <label htmlFor="email"> <FontAwesomeIcon icon={faUser} className="inputIcon" /> email</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
                 <label htmlFor="password"> <FontAwesomeIcon icon={faLock} className="inputIcon" /> password</label>

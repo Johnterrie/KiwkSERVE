@@ -1,10 +1,10 @@
 const Joi=require('joi');
 
 const createUser = (data) => {
-    const schema=Joi.object({
-        fullName:  Joi.string().required(),
-        email :  Joi.string().required(),
-        password:  Joi.string().min(8).max(1024),
+    const schema= Joi.object({
+        fullName:  Joi.string(),
+        email :  Joi.string(),
+        password:  Joi.string(),
     })
     return schema.validate(data);
 }
