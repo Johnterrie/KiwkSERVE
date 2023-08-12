@@ -1,6 +1,8 @@
 import React from 'react';
 import './appCard.css';
 import man from './person.jpg';
+import { Link } from "react-router-dom";
+
 
 
 const AppCard = (props) => {
@@ -26,7 +28,9 @@ const AppCard = (props) => {
         <p>{phoneNumber}</p>
         <p>{cityState}</p>
         <div className="button-container">
+        <Link to="/ratedProfessional">
           <button>View</button>
+        </Link>  
         </div>
       </div>
     </div>

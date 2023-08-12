@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 #nav{
     background-color: beige;
     margin-bottom:-8px ;
@@ -13,6 +16,11 @@
 #btnbecome:hover{
 color: white;
 }
+
+.bg-body-secondary{
+    font-family: 'Caveat', cursive;
+}
+
 #top{
     background-color: black;
 }
@@ -24,20 +32,48 @@ position: relative;
     top: 11px;
     right:2px;
 } 
+
+.SearchBtn:hover{
+    background-color: #DFA878;
+}
+
+.SearchBtn{
+    background-color: #9e8874;
+    border: none;
+}
+
 #navbarScrollingDropdown{
     font-size: 20px;
+}
+
+.logo-div {
+    display: flex;
+    align-items: center;
+}
+
+.kwik{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: #482200;
+}
+
+.logo{
+    width: 5vw;
+    height: 10vh;
+    margin:0 10px 0 20px;
 }
 
 .signup{
     margin-right: 10px;
 }
 #btnbecome{
-    border:1px solid green;
+    border: none;
     margin-right: 7px;
-    width: 300px;
+    width: 200px;
+    height: 40px;
     border-radius:5px ;
-     background-color: gray; 
+     background-color:#DFA878; 
 } 
 #btnbecome:hover{
-    background-color: green;
+    background-color: #914400;
 }

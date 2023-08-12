@@ -1,8 +1,8 @@
 
 import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
-import HomePage from "scenes/homePage";
-import LoginPage from "scenes/loginPage";
-import ProfilePage from "scenes/profilePage";
+import HomePage from "./homePage/index";
+import LoginPage from "./loginPage/index";
+import ProfilePage from "./profilePage/index";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -13,6 +13,9 @@ import { themeSettings } from "./theme";
     function App() {
       const mode  = useSelector((state) => state.mode);
       const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
+
+      // const theme = createStore()
+
 
       return (
         <div className="app">
@@ -30,4 +33,4 @@ import { themeSettings } from "./theme";
       );
     }
 
-    export default App;
+export default App;

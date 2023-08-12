@@ -1,36 +1,15 @@
 .caro{
-
-    margin-bottom: 21rem;
+    margin-bottom: 10rem;
     margin-right: -10rem;
     padding-left: 31rem;
 } 
-
-/* .y{
-    position:relative;
-}
-.x{
-    display:inline-block;
-    position:relative;
-    transition: opacity 0.3s ease-in-out;
-} */
-
 .caro .title{
     width:570px ;
     font-size: 3.3rem;
     color: green;
     font-weight:900;
-
-    /* position: absolute; */
- /* width: 20%;
- height: 400px; */
- /* background: black; */
-
-
 }
-
-
 .caro .para{
-    /* color: black; */
     font-size:30px ;
     text-align: left;
     font-weight: 700;
@@ -39,5 +18,9 @@
     font-size: 30px;
     text-align: left;
     font-weight: 700;
+}
 
+.x{
+    height: 580px;
+    opacity: -1;
 }
