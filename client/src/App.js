@@ -1,7 +1,7 @@
 import "./App.css";
 import { Router, Route, Routes } from "react-router-dom";
 import Homepage from "./homepage";
-import Professional from "./component/profile/App";
+import Professional from "./component/signUp/App";
 import Cards from "./component/card/component/App";
 import List from "./component/List/App"
 
