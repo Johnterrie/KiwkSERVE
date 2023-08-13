@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-image: linear-gradient(79deg, #141e30,  #004e92 30%, #243b55);
+}
+.auth-form-container,.professional-form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  .auth-form-container {
+    padding: 5rem;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 0.5rem;
+    background-image: linear-gradient(10deg, #141e30, #f7fafd 10%, #243b55);
+  }
+}
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+  color:  #fff;
+}
+input {
+  padding: 0.4rem;
+  margin: 0.2rem 0;
+  border-radius: 3px;
+}
+.reg-text {
+  color: #fff;
+}
+
+.lll {
+  background-color: #4682a9;
+  color: #fff;
+}
+.sel-locate {
+  position: static;
+}
+button {
+  /* border: 1px solid #fff; */
+  background-color: #4682a9;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.4rem;
+  margin-top: 12px;
+  border:none ;
+  transition: all 1s ease-in-out;
+}
+button:hover {
+  background-color: #fff;
+  border: 2px solid #4682a9;
+  color: #4682a9;
+}
