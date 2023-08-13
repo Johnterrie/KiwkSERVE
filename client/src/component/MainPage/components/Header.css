@@ -1,13 +1,23 @@
 .caro{
-    margin-bottom: 10rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 7rem;
     margin-right: -10rem;
     padding-left: 31rem;
 } 
+
+.x{
+    height: 580px;
+}  
+
 .caro .title{
     width:570px ;
     font-size: 3.3rem;
-    color: green;
+    color: #4682a9;
     font-weight:900;
+}
+
+.caro .title .meet{
+    color: black;
 }
 .caro .para{
     font-size:30px ;
@@ -19,8 +29,16 @@
     text-align: left;
     font-weight: 700;
 }
-
-.x{
-    height: 580px;
-    opacity: -1;
+.btnsee{
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #4682a9;
+    position: relative; 
+    bottom:9rem ;
+    left: 9.6rem;
+}
+.btnsee:hover{
+    background-color: #9e8874;
 }
