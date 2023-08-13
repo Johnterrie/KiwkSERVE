@@ -28,7 +28,7 @@ function NavScrollExample() {
             navbarScroll
           >
             <NavDropdown
-              title="Artisan Available"
+              title="Professionals Available"
               id="navbarScrollingDropdown"
               className="m-2"
             >
@@ -89,7 +89,7 @@ function NavScrollExample() {
           <Form className="d-flex">
             <Form.Control
               type="search"
-              placeholder="Search for Professionals Around You"
+              placeholder="Search"
               className="me-2"
               aria-label="Search"
             />

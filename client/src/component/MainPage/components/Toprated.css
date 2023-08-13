@@ -1,17 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap"); */
 
 .toprated {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: start;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .toprated .topratedtitle {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 900;
   color: #482200;
   font-size: 50px;
@@ -29,13 +31,13 @@
 /* TOPRATEDCARD STYLING */
 
 .topratedcard {
-  background-color: beige;
   border-radius: 15px;
   width: 300px;
   height: 350px;
   margin: 20px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  color: black;
 }
 .topratedcard:hover {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
@@ -58,17 +60,8 @@
   margin-left: 20px;
 }
 
-.topratedimg {
-  z-index: -1;
-  border: 1px solid red;
-  margin-top: 20px;
-  width: 20vw;
-  border-radius: 200px;
-  overflow: hidden;
-}
-
-.topratedcard{
-  border: 1px solid green;
+.topratedimg{
+  z-index: 0;
 }
 
 @media only screen and (max-width: 600px) {

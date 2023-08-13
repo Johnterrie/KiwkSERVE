@@ -5,16 +5,15 @@ function Footer() {
   return (
     <div id='footer'>
 
-      <div id="">
+      <div id="kwikserve" className='foot'>
         <h3 id="top">Kwikserve.com</h3>
         <p>
-          Kwikserve is a place where you can find any kind of artisan <br/>services your
-           house or office may need.<br/>our services are affordable and fast. <br />
-          {/* <br /> */}
+          Kwikserve is a place where you can find any kind<br/>of services your
+          house or office may need.<br/>our services are affordable and fast. <br />
           Copyright &copy; 2023 inferno all rights reserved.
         </p>
       </div>
-      <div id="contact">
+      <div id="contact" className='foot'>
         <h3 id="top"> Contact Us</h3>
         Email:<a href="">Kwikserve@gmail.com</a>
         <br />
@@ -22,7 +21,7 @@ function Footer() {
         <br />
         Address:2384 street,NYC.
       </div>
-      <div id="socials">
+      <div id="socials" className='foot'>
         <h3 id="top">Socials</h3>
         <a href="#">Facebook</a><br />
         <a href="#">Twitter</a><br />

@@ -9,7 +9,7 @@
       {     
         image:<img src="https://media.istockphoto.com/photos/brazilian-maid-washing-the-dishes-picture-id1017374580?k=20&m=1017374580&s=612x612&w=0&h=CLqwrvS2xjPRpbwyp8bJdnwX1PVvFH1FKBk_SXA5Tc0=" width="300" height="180"/>,
         name:'Janet chinedu',
-        occupation:'House Keeper',
+        occupation:'Maid',
         location:'Bariga',
       },
       {

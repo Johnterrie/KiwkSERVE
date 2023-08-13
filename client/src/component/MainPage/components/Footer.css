@@ -3,7 +3,6 @@
     margin: 10px auto;
     border:1px solid ;
     display: flex;
-    /* flex-direction: row; */
     justify-content: space-between;
     background-color:rgb(62, 60, 60);
     color: white;
@@ -12,7 +11,7 @@
 #top{
     background-color:rgb(62, 60, 60) ;
     line-height:2rem;
-    color: rgb(200, 200, 91);
+    color: #4682a9;
     font-size: 20px;
 }
  a{
@@ -23,4 +22,8 @@
 a:hover{
     color: rgb(190, 190, 127);
     font-size:17px ;
+}
+.foot{
+    text-align: start;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
