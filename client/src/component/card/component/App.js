@@ -1,4 +1,5 @@
 import Profile from "./card";
+
 import "./App";
 import { useState, useEffect } from "react";
 import axios from "axios";
