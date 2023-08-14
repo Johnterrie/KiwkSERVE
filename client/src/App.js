@@ -1,9 +1,10 @@
 import "./App.css";
-import { Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Homepage from "./homepage";
-import Professional from "./component/signUp/App";
+import ProfessionalApp from "./component/professionalSignUp/App";
 import Cards from "./component/card/component/App";
 import List from "./component/List/App"
+import UserSignUp from "./component/signUp/App"
 
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
     <div className="App">
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/professional" element={<Professional />}/>
+          <Route path="/professional" element={<ProfessionalApp />}/>
           <Route path="/ratedProfessional" element={<Cards/>} />
           <Route path="/allProfessional" element={<List/>}/>
+          <Route path="/usersignup" element={<UserSignUp/>}/>
         </Routes>
     </div>
   );

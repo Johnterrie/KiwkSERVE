@@ -30,7 +30,7 @@ export const Register = (props) => {
         }
 
         try {   
-            await axios.post("http://localhost:8080/professional", {
+            await axios.post("http://localhost:8080/usersignup", {
                 fullName: name,
                 email: email,
                 password: pass

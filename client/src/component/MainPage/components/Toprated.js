@@ -4,6 +4,8 @@ import { TopratedList } from "./TopratedList";
 import TopratedCard from "./TopratedCard";
 import "./Toprated.css";
 
+
+
 function Toprated() {
   return (
     <div className="toprated">

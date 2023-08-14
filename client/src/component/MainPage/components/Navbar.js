@@ -9,8 +9,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import React from "react";
 import "./Navbar.css";
 import { Routes, Route, Link } from "react-router-dom";
-import { FaSearch } from "react-icons/fa"
-import logo from "./logo.png"
+import { FaSearch } from "react-icons/fa";
+import logo from "./logo.png";
 
 function NavScrollExample() {
   return (
@@ -32,16 +32,6 @@ function NavScrollExample() {
               id="navbarScrollingDropdown"
               className="m-2"
             >
-              {
-                <Form.Control
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-              }
-              <button className="search-btn">search</button>
-
               <NavDropdown.Item href="#action3">Electrician</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">Plumber</NavDropdown.Item>
@@ -58,16 +48,6 @@ function NavScrollExample() {
               id="navbarScrollingDropdown"
               className="m-2"
             >
-              {
-                <Form.Control
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-              }
-              <button className="search-btn">search</button>
-
               <NavDropdown.Item href="#action3">Lekki</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">Ajah</NavDropdown.Item>
@@ -82,7 +62,7 @@ function NavScrollExample() {
             </NavDropdown>
           </Nav>
 
-          <Link to='/professional'>
+          <Link to="/professional">
             <button id="btnbecome">Become a Professional</button>
           </Link>
 
@@ -94,7 +74,9 @@ function NavScrollExample() {
               aria-label="Search"
             />
 
-            <Button className="SearchBtn"><FaSearch/></Button>
+            <Button className="SearchBtn">
+              <FaSearch />
+            </Button>
           </Form>
         </Navbar.Collapse>
       </Container>

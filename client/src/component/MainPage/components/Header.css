@@ -42,3 +42,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 .btnsee:hover{
     background-color: #9e8874;
 }
+
+.section-one {
+    width: 100vw;
+}

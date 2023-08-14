@@ -1,10 +1,8 @@
-const { Professional } = require("../model/professionalSchema");
-const { Professionalschema } = require("../validation/ProfessionalSchema");
-const bcrypt = require("bcryptjs");
+const  Professional  = require("../model/professionalSchema");
+// const { Professionalschema } = require("../validation/ProfessionalSchema");
 
 const getAllProfessional = async (req, res)=>{
     console.log(req.body);
-
     try {
         const allProfessional= await Professional.find({})
         console.log(allProfessional);
@@ -16,35 +14,63 @@ const getAllProfessional = async (req, res)=>{
 }
 
 const signUpProfessional = async (req, res) => {
-  const { error, value } = Professionalschema.validate(req.body);
-  // if (password !== confirmPassword) {
-  //     res.status(404)({message:"Password do not Match"})
-  //   }
-  if (error) {
-    res.status(400).send(`Validation Error : ${error}`);
-  }
+  
+  const { fullName, email, password, phoneNumber, location, profession } = req.body;
+  // empty field check
+  console.log(fullName, email, password, phoneNumber, location, profession);
 
   try {
-    const hashPassword = await bcrypt.hash(value.password, 10);
-    const prof = new Professional({
-      firstName: value.firstname,
-      lastName: value.lastname,
-      rating: value.rating,
-      phoneNumber: value.phoneNumber,
-      profession: value.profession,
-      location: value.location,
-      image: req.path.file,
-      email: value.email,
-      yearsofexperience: value.yearsofexperience,
-      password: hashPassword,
-      confirmPassword: hashPassword,
+    if (!email || !fullName || !password || !location || !profession || !phoneNumber) {
+      res.status(404);
+      throw new Error("Please fill in name, email or password");
+    }
+
+    // user exist check
+    const userExists = await Professional.findOne({ email });
+    if (userExists) {
+      res.status(404);
+      throw new Error("User is already Registered");
+    }
+
+    //create user
+    const user = await Professional.create({
+      name: fullName,
+      email: email,
+      password: password,
+      location: location,
+      profession: profession,
+      phoneNumber: phoneNumber
     });
-    const user = await prof.save();
-    console.log(user);
-    res.status(404).json({ "Email already exit": user });
-    console.log(user);
+
+    //generate token
+    const token = Professional.createJWt();
+    //send http-only cookie
+
+    res.cookie("token", token, {
+      path: "/",
+      httpOnly: true,
+      expires: new Date(Date.now() + 1000 * 86400),
+      sameSite: "none",
+      secure: true,
+    });
+    // display user
+    if (user) {
+      const { _id, name, email } = user;
+      res.status(201) /
+        json({
+          _id,
+          name,
+          email,
+        });
+    } else {
+      res.status(404);
+      throw new Error("Email is Already Registered");
+    }
   } catch (error) {
-    console.log(error);
+   res.status(400).json({
+      status: "Error",
+      message: error.message
+   })
   }
 };
 
