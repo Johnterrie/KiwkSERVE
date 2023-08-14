@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
- const Professional = () => {
+ const Professional = (props) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
@@ -89,6 +89,9 @@ import axios from "axios";
                 </select>
                 <input type="practice field" placeholder="Choose location..." id="practice field" name="practice field" value={myLocation}/>
                 <button type="submit">Sign up</button>  
+
+                <div className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</div>
+
             </form>
         </div> 
         </div>

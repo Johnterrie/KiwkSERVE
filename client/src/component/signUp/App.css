@@ -21,7 +21,7 @@
     border: 1px solid #fff;
     border-radius: 10px;
     margin: 0.5rem;
-    background-color: #d2ccc4;
+    background-color: #4682a9;
   }
 }
 
@@ -41,9 +41,11 @@ button {
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
-  color: #7439db;
+  color: #4682a9;
 }
+
 .link-btn {
+  margin-top: 10px;
   background: none;
   color: #fff;
   text-decoration: underline;
@@ -60,7 +62,7 @@ button {
 .inputIcon {
   top: 100%;
 }
-/* .passord-toggle-icon {
-  position: absolute;
+
+.link-btn:hover {
   cursor: pointer;
-} */
+}

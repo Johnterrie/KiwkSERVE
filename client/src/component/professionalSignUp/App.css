@@ -18,7 +18,7 @@
     border: 1px solid #fff;
     border-radius: 10px;
     margin: 0.5rem;
-    background-image: linear-gradient(10deg, #141e30, #f7fafd 10%, #243b55);
+    background: #4682a9;
   }
 }
 label {
@@ -52,8 +52,18 @@ button {
   border:none ;
   transition: all 1s ease-in-out;
 }
+
 button:hover {
   background-color: #fff;
   border: 2px solid #4682a9;
   color: #4682a9;
+}
+
+.link-btn{
+  margin-top: 10px;
+  color: #4682a9;
+}
+
+.link-btn:hover {
+  cursor: pointer;
 }

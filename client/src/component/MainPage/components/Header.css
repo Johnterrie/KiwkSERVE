@@ -35,14 +35,15 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     border-radius: 5px;
     background-color: #4682a9;
-    position: relative; 
+    position: relative;
+    color: #ffffff;
     bottom:9rem ;
     left: 9.6rem;
 }
 .btnsee:hover{
-    background-color: #9e8874;
+    background-color: #2b5068;
+    color: #ffffff;
 }
-
 .section-one {
     width: 100vw;
 }
