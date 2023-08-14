@@ -1,7 +1,7 @@
 import './App.css';
 import  Professional  from './Professional';
 
-function App() {
+function ProfessionalApp() {
   return (
     <div className="App">
        <Professional />
@@ -9,4 +9,4 @@ function App() {
   );
 }
 
-export default App;
+export default ProfessionalApp;

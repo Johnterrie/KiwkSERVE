@@ -3,13 +3,14 @@
 
 #nav{
     /* background-color: #00D5FA; */
-    background-color: #A1CCD1;
+    background-color: #6fa6e0;
     margin-bottom:-8px ;
     margin-top:-5px;
     padding:6px ;
     position: fixed;
     top: 0;
     z-index: 1000;
+    width: 99.5vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #navbarScrollingDropdown:hover{
@@ -74,9 +75,12 @@ position: relative;
     margin-right: 7px;
     width: 200px;
     height: 40px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius:5px ;
-     background-color:#4682a9; 
+    text-align: center;
+    padding-top: 10px;
+    color: aliceblue;
+    background-color:#4682a9; 
 } 
 #btnbecome:hover{
     background-color: #9e8874;

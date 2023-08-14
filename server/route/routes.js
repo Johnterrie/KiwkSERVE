@@ -9,10 +9,10 @@ const multer = require("multer")
 const upload = multer({dest:"image/"})
 
 router.get("/getallprofessional", getAllProfessional)
-router.post("/signuprofessional", upload.single("image"), signUpProfessional)
+router.post("/signupprofessional", signUpProfessional)
 router.post("/loginprofessional", loginProfessional)
-router.post('/professional', signUp);
-router.post('/loginuser', login);
+router.post('/usersignup', signUp);
+router.post('/userlogin', login);
 router.get("/users/loggedin", loggedIn);
 
 

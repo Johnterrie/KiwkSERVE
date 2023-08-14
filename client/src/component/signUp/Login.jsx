@@ -13,8 +13,6 @@ export const Login = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        console.log("am working")
-
         if(
             email.trim() === '' ||
             pass.trim() === ''
@@ -25,7 +23,7 @@ export const Login = (props) => {
         }
 
         try {   
-            await axios.post("http://localhost:8080/professional", {
+            await axios.post("http://localhost:8080/loginprofessional", {
                 email: email,
                 password: pass
             })

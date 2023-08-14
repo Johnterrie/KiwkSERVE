@@ -1,15 +1,51 @@
 import React, { useState } from "react";
+import axios from "axios";
 
  const Professional = () => {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+    const [error, setError] = useState('');
+    const [phone, setPhone] = useState('');
+    const [success, setSuccess] = useState('');
     const [confirm, setConfirm] = useState('');
+    const [CheckConfirmPassword, setCheckConfirmPassword] = useState('');
     const [myLocation, setMyLocation] = useState('');
     const [profession, setProfession] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // console.log(email);
+
+        if(
+            name.trim() === "" ||
+            email.trim() === "" ||
+            pass.trim() === "" ||
+            phone.trim() === "" ||
+            myLocation.trim() === "" ||
+            profession.trim() === ""
+        ) {
+            setError("Please fill all the Fields")
+        } else {
+            setSuccess("sign up successfully")
+        }
+
+        if (pass !== confirm) {
+            setCheckConfirmPassword("Password do not Match")
+          }
+
+        try {   
+            await axios.post("http://localhost:8080/signupprofessional", {
+                fullName: name,
+                email: email,
+                password: pass,
+                phoneNumber: phone,
+                location: myLocation,
+                profession: profession
+            })
+            console.log("form submitted Successfully");
+        } catch (e) {
+            console.log("Error: " + e.message)
+        }
     }
 
     const handleChange = (e) => {
@@ -27,7 +63,7 @@ import React, { useState } from "react";
             <h2 className="reg-text">Register your account</h2>
             <form className="professional-form" onSubmit={handleSubmit}>
                 <label htmlFor="First Name">Name</label>
-                <input type="text" placeholder="Enter your full name..." id="First Name" name="First Name"/>
+                <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Enter your full name..." id="First Name" name="First Name"/>
                 <label htmlFor="email">Email address</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Enter your email address..." id="email" name="email" />
                 <label htmlFor="password">Password</label>
@@ -35,7 +71,7 @@ import React, { useState } from "react";
                 <label htmlFor="password">Confirm Password</label>
                 <input value={confirm} onChange={(e) => setConfirm(e.target.value)} type="password" placeholder="Confirm your password..." id="Confirm password" name="Confirm password" />
                 <label htmlFor="phone number">Phone Number</label>
-                <input type="phone number" placeholder="phone number..." id="phone number" name="phone number"/>
+                <input value={phone} onChange={(e) => setPhone(e.target.value)}type="phone number" placeholder="phone number..." id="phone number" name="phone number"/>
                 <label htmlFor="Practice field">Profession</label>
                 <select className="lll" value={profession} onChange={changeData}>
                     <option>Select profession...</option>
