@@ -56,7 +56,7 @@ export const Register = (props) => {
                 <span className="passord-toggle-icon">{ToggleIcon}</span>
                 <button type="submit">Sign Up</button>
             </form>
-            <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
+            <div className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</div>
         </div>
     )    
 }

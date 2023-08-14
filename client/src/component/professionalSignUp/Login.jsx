@@ -4,7 +4,7 @@ import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import axios from 'axios';
 
 
-export const Login = (props) => {
+const Login = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [error, setError] = useState('');
@@ -47,3 +47,5 @@ export const Login = (props) => {
         </div>
     )
 }
+
+export default Login

@@ -1,51 +1,80 @@
-
 .app-card {
-    display: flex;
-    border: 1px solid #ccccccda;
-    background-color: whitesmoke;
-    margin: 20px;
-    padding: 20px;
-  }
-
-  .image-frame {
-    /* border: 1px solid red; */
-    width: 30vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    overflow: hidden;
-    margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #e1f3ff;
+  padding: 20px 0;
+  height: 30vh;
+  margin-bottom: 20px;
 }
 
-  .image-frame img {
-    width: 30vw;
-    height: 40vh;
-    object-fit: cover;
-
-  }
-
-  .button-container {
-    margin-top: 10px;
-  }
-
-  button {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-  }
-.flex-it{
-display: flex;
-border: 1px solid #ccc;
-
-
+.div-container {
+  margin: 15vh 3vw 0;
 }
-.img-container{
-width: 10rem;
+
+.app-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
-.profile-img{
-width: 100%;
+
+.image-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+.image-frame img {
+  width: 15vw;
+  height: 25vh;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.button-container {
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.flex-it {
+  display: flex;
+  border: 1px solid #ccc;
+}
+.img-container {
+  width: 10rem;
+}
+.profile-img {
+  width: 100%;
+}
+
+.inner-div {
+  display: flex;
+}
+
+.inner-div-left{
+  width: 50%;
+}
+.inner-div-right{
+  width: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  color: #204964;
+  width: 60vw;
+  height: 20vh;
+  margin-right: 40px;
+  
 }
