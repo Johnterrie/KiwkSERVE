@@ -4,30 +4,25 @@ import man from "./person.jpg";
 import { Link } from "react-router-dom";
 
 const AppCard = (props) => {
-  const {
-    imageSrc,
-    companyName,
-    companyAddress,
-    companyDescription,
-    phoneNumber,
-    cityState,
-  } = props;
+  const {info} = props
+  const {_id, name, email, location, phoneNumber, profession } = info
+  console.log(info);
 
   return (
-    <div className="app-card">
+    <div key={_id} className="app-card">
       <div className="image-frame">
-        <img className="image-lister" src={man} alt={companyName} />
+        <img className="image-lister" src={man} alt= "hello" />
       </div>
       <div className="info">
-        <h2>{companyName}</h2>
+        <h2>{name}</h2>
         <div className="inner-div">
           <div className="inner-div-left">
-            <p>{companyAddress}</p>
-            <p>{companyDescription}</p>
+            <p>{email}</p>
+            <p>{location}</p>
           </div>
           <div className="inner-div-right">
             <p>{phoneNumber}</p>
-            <p>{cityState}</p>
+            <p>{profession}</p>
           </div>
         </div>
       </div>
