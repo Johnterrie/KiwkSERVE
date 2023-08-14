@@ -4,22 +4,21 @@ import AppCard from "./appCard";
 import man from "./person.jpg";
 import NavBar from "./Navbar";
 
-function App() {
+function App({ list }) {
+  const { professionals } = list;
+
   return (
     <div className="app-container">
       <NavBar />
-      <div className="div-container">
-        <AppCard
-          image
-          src={man}
-          alt="person"
-          companyName="Shell Company"
-          companyAddress="1102 Maryland St, City"
-          companyDescription="A leading provider of technical innovative solutions."
-          phoneNumber="+23490656***"
-          cityState="Lagos,State"
-        />
-      </div>
+      {professionals.map((data) => {
+        return (
+          <div className="div-container">
+            <AppCard
+              info = {data}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }

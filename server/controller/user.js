@@ -1,8 +1,7 @@
 const User = require("../model/userSchema");
+const Professional = require("../model/professionalSchema");
 
 const signUp = async (req, res) => {
-  console.log(req.body)
-
 
   const { fullName, email, password } = req.body;
   // empty field check
@@ -18,13 +17,16 @@ const signUp = async (req, res) => {
       throw new Error("User is already Registered");
     }
     //create user
+
     const user = await User.create({
       name: fullName,
       email: email,
       password: password,
     });
+
     //generate token
-    const token = User.createJWt();
+    const token = await user.createJWT();
+
     //send http-only cookie
     res.cookie("token", token, {
       path: "/",
@@ -33,24 +35,24 @@ const signUp = async (req, res) => {
       sameSite: "none",
       secure: true,
     });
+
     // display user
     if (user) {
-      const { _id, name, email } = user;
-      res.status(201) /
-        json({
-          _id,
-          name,
-          email,
-        });
+      const professionals = await Professional.find({}).select("-password");
+      res.status(201).json({
+        status: "success",
+        loggedIn: true,
+        professionals,
+      });
     } else {
       res.status(404);
       throw new Error("Email is Already Registered");
     }
   } catch (error) {
-   res.status(400).json({
+    res.status(400).json({
       status: "Error",
-      message: error.message
-   })
+      message: error.message,
+    });
   }
 };
 
@@ -83,12 +85,13 @@ const login = async (req, res) => {
     sameSite: "none",
     secure: true,
   });
+
   if (user && isCorrectPassword) {
-    const { _id, email, name } = user;
+    const professionals = await Professional.find({}).select("-password");
     res.status(201).json({
-      _id,
-      email,
-      name,
+      status: "success",
+      loggedIn: true,
+      professionals,
     });
   } else {
     res.status(400);

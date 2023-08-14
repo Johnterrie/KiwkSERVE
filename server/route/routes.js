@@ -3,12 +3,11 @@ const router = express.Router();
 
 const {signUp, login, loggedIn}=require('../controller/user')
 
-const { signUpProfessional , getAllProfessional, loginProfessional} = require("../controller/Professional")
+const { signUpProfessional, loginProfessional} = require("../controller/Professional")
 
 const multer = require("multer")
 const upload = multer({dest:"image/"})
 
-router.get("/getallprofessional", getAllProfessional)
 router.post("/signupprofessional", signUpProfessional)
 router.post("/loginprofessional", loginProfessional)
 router.post('/usersignup', signUp);
