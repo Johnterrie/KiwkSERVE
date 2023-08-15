@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import List from "../List/App";
+import Card from "../card/component/App"
 
 
 const Login = (props) => {
@@ -81,7 +82,7 @@ const Login = (props) => {
   };
 
   console.log(data);
-  return <div>{response ? <List list={data} /> : loginPage()}</div>;
+  return <div>{response ? <Card list={data} /> : loginPage()}</div>;
 };
 
 export default Login;
