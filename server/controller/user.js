@@ -2,7 +2,7 @@ const User = require("../model/userSchema");
 const Professional = require("../model/professionalSchema");
 
 const signUp = async (req, res) => {
-
+  console.log(req.body);
   const { fullName, email, password } = req.body;
   // empty field check
   try {

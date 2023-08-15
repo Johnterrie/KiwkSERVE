@@ -51,7 +51,7 @@ export const Register = (props) => {
     
     return (
         <div className="auth-form-container">
-           <h2>Register</h2>
+           <h2>User Register</h2>
            <form className="register-form" onSubmit={handleSubmit}>
                <label htmlFor="name"> <FontAwesomeIcon icon={faUser} className="inputIcon" /> Full name</label>
                <input value={name} onChange={(e) => setName(e.target.value)} name="name" id="name" placeholder="full name" />

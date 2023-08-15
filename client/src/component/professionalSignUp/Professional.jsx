@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import List from "../List/App";
+import Card from "../card/component/App"
+
 
 
 const Professional = (props) => {
@@ -162,7 +164,7 @@ const Professional = (props) => {
   console.log(data)
   return (
     <div>
-        { response ? <List list = {data}/> : loginPage()}
+        { response ? <Card list={data}/> : loginPage()}
     </div>
   );
 };
