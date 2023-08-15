@@ -120,11 +120,14 @@ const Professional = (props) => {
               <option>Select profession...</option>
               <option value="Mechanic">Mechanic</option>
               <option value="Plumber">Plumber</option>
-              <option value="Painter">Electrician</option>
-              <option value="Painter">House Keeper</option>
-              <option value="Painter">Vulcanizer</option>
+              <option value="Electrician">Electrician</option>
+              <option value="House Keeper">House Keeper</option>
+              <option value="Vulcanizer">Vulcanizer</option>
               <option value="Painter">Painter</option>
-              <option value="Painter">Car Wash</option>
+              <option value="Car Wash">Car Wash</option>
+              <option value="Tiler">Tiler</option>
+              <option value="Barber">Barber</option>
+              <option value="Laundry Services">Laundry Services</option>
             </select>
             <label htmlFor="Practice field">Location</label>
             <select className="lll" value={myLocation} onChange={handleChange}>
@@ -132,13 +135,14 @@ const Professional = (props) => {
               <option value="ikoyi">ikoyi</option>
               <option value="Gbagada">Gbagada</option>
               <option value="Lekki">Lekki</option>
-              <option value="Lekki">Ajah</option>
-              <option value="Lekki">Shomolu</option>
-              <option value="Lekki">Ketu</option>
-              <option value="Lekki">Ikeja</option>
-              <option value="Lekki">Ajegunle</option>
-              <option value="Lekki">Ikorodu</option>
-              <option value="Lekki">Oshodi</option>
+              <option value="Ajah">Ajah</option>
+              <option value="Shomolu">Shomolu</option>
+              <option value="Ketu">Ketu</option>
+              <option value="Ikeja">Ikeja</option>
+              <option value="Ajegunle">Ajegunle</option>
+              <option value="Ikorodu">Ikorodu</option>
+              <option value="Oshodi">Oshodi</option>
+              <option value="Surulere">Surulere</option>
             </select>
             <button type="submit">Sign up</button>
 
