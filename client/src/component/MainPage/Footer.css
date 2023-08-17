@@ -8,13 +8,13 @@
     color: white;
     padding: 80px 120px;
 }
-#top{
-    background-color:rgb(62, 60, 60) ;
+
+.top{
     line-height:2rem;
-    color: #4682a9;
-    font-size: 20px;
+    color: #5eafe5;
 }
- a{
+
+a{
     text-decoration:none ;
     color:white ;
 }

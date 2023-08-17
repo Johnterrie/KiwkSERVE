@@ -63,21 +63,8 @@ function NavScrollExample() {
           </Nav>
 
           <Link to="/professional">
-            <button id="btnbecome">Become a Professional</button>
+            <button id="btnbecome">Professionals</button>
           </Link>
-
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-
-            <Button className="SearchBtn">
-              <FaSearch />
-            </Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
