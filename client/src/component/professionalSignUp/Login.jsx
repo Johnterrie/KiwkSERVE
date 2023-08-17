@@ -82,7 +82,7 @@ const Login = (props) => {
   };
 
   console.log(data);
-  return <div>{response ? <Card list={data} /> : loginPage()}</div>;
+  return <div>{response ? <List list={data} /> : loginPage()}</div>;
 };
 
 export default Login;

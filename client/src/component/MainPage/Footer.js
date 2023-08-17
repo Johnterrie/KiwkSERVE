@@ -7,7 +7,7 @@ function Footer() {
 
       <div id="kwikserve" className='foot'>
 
-        <h3 id="top">Kwikserve.com</h3>
+        <h2 class="top">Kwikserve.com</h2>
 
         <p>
           Kwikserve is a place where you can find any kind<br/>of services your
@@ -19,7 +19,7 @@ function Footer() {
 
       <div id="contact" className='foot'>
 
-        <h3 id="top"> Contact Us</h3>
+        <h2 class="top"> Contact Us</h2>
 
         Email:<a href="">Kwikserve@gmail.com</a>
 
@@ -32,7 +32,7 @@ function Footer() {
 
       <div id="socials" className='foot'>
 
-        <h3 id="top">Socials</h3>
+        <h2 class="top">Socials</h2>
 
         <a href="#">Facebook</a><br />
 

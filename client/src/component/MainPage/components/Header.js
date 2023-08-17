@@ -65,8 +65,8 @@ function Header() {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-        <Link to="usersignup">
-          <button className="btnsee">Click to See More</button>
+        <Link to="allProfessional">
+          <button className="btnsee">View all Professionals</button>
         </Link>
       </div>
     </>

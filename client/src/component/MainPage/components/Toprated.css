@@ -64,6 +64,12 @@
   z-index: 0;
 }
 
+.paragra {
+  margin: 5px;
+  font-weight: 900;
+  color: rgb(44, 68, 113);
+}
+
 @media only screen and (max-width: 600px) {
   .menuList {
     grid-template-columns: 1fr 1fr 1fr;

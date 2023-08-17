@@ -12,6 +12,7 @@ const Professional = (props) => {
   const [error, setError] = useState("");
   const [phone, setPhone] = useState("");
   const [success, setSuccess] = useState("");
+  const [address, setAddress] = useState("");
   const [confirm, setConfirm] = useState("");
   const [CheckConfirmPassword, setCheckConfirmPassword] = useState("");
   const [myLocation, setMyLocation] = useState("");
@@ -113,9 +114,18 @@ const Professional = (props) => {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               type="phone number"
-              placeholder="phone number..."
+              placeholder="Phone number..."
               id="phone number"
               name="phone number"
+            />
+            <label htmlFor="Address">Address</label>
+            <input
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              type="Address"
+              placeholder="Address..."
+              id="Address"
+              name="Address"
             />
             <label htmlFor="Practice field">Profession</label>
             <select className="lll" value={profession} onChange={changeData}>

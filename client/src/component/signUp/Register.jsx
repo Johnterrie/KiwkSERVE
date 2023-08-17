@@ -60,6 +60,7 @@ export const Register = (props) => {
                <label htmlFor="password"> <FontAwesomeIcon icon={faLock} className="inputIcon" /> password</label>
                <input value={pass} onChange={(e) => setPass(e.target.value)} type={PasswordInputType} placeholder="********" id="password" name="password" />
                <span className="passord-toggle-icon">{ToggleIcon}</span>
+               <span>{error}</span><span>{success}</span>
                <button type="submit">Sign Up</button>
            </form>
            <div className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</div>
