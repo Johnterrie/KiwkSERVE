@@ -33,7 +33,7 @@ const AppCard = (props) => {
 
         </div>
       </div>
-      <Link to="/ratedProfessional">
+      <Link to="/usersignup">
         <button className="viewBtn">View</button>
 
       </Link>
