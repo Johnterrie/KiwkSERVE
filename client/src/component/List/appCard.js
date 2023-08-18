@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const AppCard = (props) => {
   const {info} = props
-  const {_id, name, email, location, phoneNumber, profession } = info
+  const {_id, name, email, location, Phone, Profession, rating, image } = info
   console.log(info);
 
   return (
@@ -13,21 +13,28 @@ const AppCard = (props) => {
       <div className="image-frame">
         <img className="image-lister" src={man} alt= "hello" />
       </div>
+
+
       <div className="info">
-        <h2>{name}</h2>
+        <h2 className="rara">{name}</h2>
+
+
         <div className="inner-div">
+
           <div className="inner-div-left">
-            <p>{email}</p>
-            <p>{location}</p>
+            <h5>{Profession}</h5>
           </div>
+          
           <div className="inner-div-right">
-            <p>{phoneNumber}</p>
-            <p>{profession}</p>
+            <p className="paragrara">{email}</p>
+            <p className="paragrara">{location}</p>
+            <p className="paragrara">{Phone}</p>
           </div>
+
         </div>
       </div>
       <Link to="/ratedProfessional">
-        <button>View</button>
+        <button className="viewBtn">View</button>
       </Link>
     </div>
   );
