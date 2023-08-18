@@ -1,68 +1,88 @@
-  .profile{
-    width: 60vw;
-    height: 85vh;
-    margin: auto;
-    margin-top: 60px;
-    display: flex;
-    border-radius: 20px;
-    background-image: linear-gradient(to right, rgb(251, 208, 208) , rgb(188, 188, 229));
-  }
-  .sidecontainer{
-    width: 20vw;
-    height: 85vh; 
-    border-radius:20px 0px 0px 20px;
-    background-image: linear-gradient(to right, rgb(251, 208, 208) , rgb(227, 227, 247));
-  }
-  .maincontainer{
-    width: 40vw;
-    height: 85vh;
-    margin-left: 10px;
-    border-radius:0px 20px 20px 0px;
-  } 
-  .imagecontainer{
-    width: 32vw;
-    height: 20vh;
-    margin-top: 5vh;
-  }
-  .image{
-    width: 10vw;
-    height: 20vh;
-    margin-left: 50px;
-    border-radius: 100px;
-  }
-  .name{
-    opacity: 0.5;
-  }
-  .text{
-    margin-left: 30px;
-    line-height: 10px;
-    margin-top: 30px;
-  }
-  .text-one{
-    margin-left: 30px;
-    line-height: 10px;
-    margin-top: 50px;
-  }
-  .text-two{
-    margin-left: 30px;
-    line-height: 10px;
-    margin-top: 50px;
-  }
-  .sidetext{
-    width: 38vw;
-    height: 35vh;
-    border-radius: 10px;
-  }
-  .lorem{
-    opacity: 0.7;
-    line-height: 18px;
-    margin-top: -15px;
-  }
-  .goal{
-    margin-top: -15px;
-  }
+body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
-  .construction-Page{
-    color: black;
-  }
-  
+.profile {
+  position: relative;
+  border-radius: 20px;
+  width: 90vw;
+  height: 85vh;
+  margin: 40px auto;
+  display: flex;
+  background-color: #edf6ff;
+  box-shadow: 0px 3px 15px rgb(194, 194, 227);
+  overflow: hidden;
+  color: black;
+}
+
+.left-container{
+  width: 30%;
+  background-color: rgb(194, 194, 227);
+  border-right: 1px solid rgba(47, 47, 166, 0.422);
+}
+
+.right-container {
+  position: relative;
+  width: 69%;
+}
+
+.image-div {
+  width: 12vw;
+  height: 25vh;
+  margin: 5vh 0 5vh 0;
+  border-radius: 40%;
+  border: 5px solid rgb(74, 74, 88);
+}
+
+.card-para {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.right-div {
+  border: 1px solid green;
+  margin: 30px;
+  height: 75vh;
+  display: flex;
+}
+
+.left-inner{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-inner{
+  padding: 30px;
+  width: 50%;
+  height: 100%;
+}
+
+.image-div-one {
+  width: 7vw;
+  height: 18vh;
+}
+
+.image-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rating {
+  border: 1px solid rgb(22, 12, 106);
+  background-color: rgb(73, 60, 188) ;
+  padding: 10px;
+  margin-top: 10px;
+  color: #edf6ff;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+.rating:hover {
+  cursor: pointer;
+}

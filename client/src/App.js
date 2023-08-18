@@ -17,6 +17,7 @@ function App() {
           <Route path="/ratedProfessional" element={<Cards/>} />
           <Route path="/allProfessional" element={<List/>}/>
           <Route path="/usersignup" element={<UserSignUp/>}/>
+          <Route path="/professionalprofile" element={<Cards/>}/>
         </Routes>
     </div>
   );
