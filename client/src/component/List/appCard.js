@@ -35,6 +35,7 @@ const AppCard = (props) => {
       </div>
       <Link to="/ratedProfessional">
         <button className="viewBtn">View</button>
+
       </Link>
     </div>
   );
