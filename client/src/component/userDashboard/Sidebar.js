@@ -16,19 +16,19 @@ const Sidebar = ({ setActiveItem, activeItem }) => {
           className={activeItem === 'Profile' ? 'active' : ''}
           onClick={() => setActiveItem('Profile')}
         >
-          Profile
+          My Profile
         </li>
         <li
           className={activeItem === 'Settings' ? 'active' : ''}
           onClick={() => setActiveItem('Bookings')}
         >
-          Bookings
+          Active Bookings
         </li>
         <li
           className={activeItem === 'Customers' ? 'active' : ''}
-          onClick={() => setActiveItem('Professionals')}
+          onClick={() => setActiveItem('Rating')}
         >
-          Professionals
+          Rating
         </li>
       </ul>
     </div>
