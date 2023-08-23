@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import List from "../List/App";
 import Card from "../card/component/App"
+import { Link } from "react-router-dom";
 
 
 
@@ -156,7 +157,10 @@ const Professional = (props) => {
               <option value="Oshodi">Oshodi</option>
               <option value="Surulere">Surulere</option>
             </select>
+
+            <Link to="/professionaldashboard" >
             <button type="submit">Sign up</button>
+            </Link>
 
             <div
               className="link-btn"

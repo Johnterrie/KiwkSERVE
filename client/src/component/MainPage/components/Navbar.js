@@ -16,56 +16,17 @@ function NavScrollExample() {
   return (
     <Navbar expand="lg" className="bg-body-secondary">
       <Container fluid id="nav">
-        <Navbar.Brand className="logo-div" href="#">
+        <Link className="logo-div" to="/">
           <img src={logo} className="logo" alt="logo" />
           <h4 className="kwik">Kwikserve</h4>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <NavDropdown
-              title="Professionals Available"
-              id="navbarScrollingDropdown"
-              className="m-2"
-            >
-              <NavDropdown.Item href="#action3">Electrician</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">Plumber</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action3">Maid</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action3">Painter</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action3">Laundry</NavDropdown.Item>
-            </NavDropdown>
+        </Link>
 
-            <NavDropdown
-              title="Location"
-              id="navbarScrollingDropdown"
-              className="m-2"
-            >
-              <NavDropdown.Item href="#action3">Lekki</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">Ajah</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action3">
-                Victoria island
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action3">Ikoyi</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action3">Gbagada</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-
+        <div>
+          <Link className="login-div" to="/usersignup">Login/Signup</Link>
           <Link to="/professional">
             <button id="btnbecome">Professionals</button>
           </Link>
-        </Navbar.Collapse>
+        </div>
       </Container>
     </Navbar>
   );
