@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import useTogglePassword from "./useTogglePassword";
 import axios from "axios";
@@ -30,7 +30,7 @@ export const Register = (props) => {
             setSuccess("sign up successfully")
         }
 
-        try {   
+        try {
             const response = await axios.post("http://localhost:8080/usersignup", {
                 fullName: name,
                 email: email,
@@ -46,9 +46,9 @@ export const Register = (props) => {
 
     }
 
-    
+
   const loginPage = () => {
-    
+
     return (
         <div className="auth-form-container">
            <h2>User Register</h2>
@@ -75,5 +75,5 @@ return (
     <div>
         { response ? <List list = {data}/> : loginPage()}
     </div>
-  );   
+  );
 }
