@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+<<<<<<< HEAD
+import './Styles.css'; 
+import Dashboard from './Dashboard';
+=======
 import Sidebar from './Sidebar';
 import Header from './Header';
 import MainContent from './MainContent';
+>>>>>>> 2ff50115f24d092d07f6b7185ae672260dc906d3
 
 function App() {
-  const [activeItem, setActiveItem] = useState('Home');
-
   return (
-    <div className="dashboard">
-      <Sidebar setActiveItem={setActiveItem} activeItem={activeItem} />
-      <div className="content">
-        <Header activeItem={activeItem} />
-        <MainContent activeItem={activeItem} />
-      </div>
+    <div className="App">
+      <Dashboard />
     </div>
   );
 }
 
 export default App;
-
 
 
