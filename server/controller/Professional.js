@@ -25,7 +25,8 @@ const signUpProfessional = async (req, res) => {
       password: password,
       location: location,
       profession: profession,
-      phoneNumber: phoneNumber
+      phoneNumber: phoneNumber,
+      image: req.file.path, 
     });
 
     //generate token

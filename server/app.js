@@ -10,6 +10,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended:true }))
 const PORT = process.env.PORT || 5000
 
+const User = require("./model/userSchema")
+const Professionals = require("./model/professionalSchema")
+const {professionals} = require("./data/data")
+
 const corsOptions ={
     origin:'http://localhost:3000', 
     credentials:true,            //access-control-allow-credentials:true
@@ -21,6 +25,8 @@ app.use(cors(corsOptions));
 app.use("/", router)
 app.listen(PORT, async() => {
     await connectDB();
+
+    // Professionals.create(professionals)
+    
     console.log("server is running on port " + PORT)
 });
-
