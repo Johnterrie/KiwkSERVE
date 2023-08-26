@@ -3,22 +3,21 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const user = mongoose.Schema({
-  name: { 
-    type: String, 
-    required: true 
+  fullName: {
+    type: String,
+    required: true
   },
-  
-  email: { 
-    type: String, 
-    required: true 
-  },
-  
-  password: { 
-    type: String, 
-    required: true 
-  }
 
-});
+  email: {
+    type: String,
+    required: true
+  },
+
+  password: {
+    type: String,
+    required: true
+  }
+}, {timestamps : true});
 
 //password encryption
 user.pre("save", async function (next) {

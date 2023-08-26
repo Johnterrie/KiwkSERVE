@@ -1,101 +1,70 @@
 const User = require("../model/userSchema");
 const Professional = require("../model/professionalSchema");
+const bcrypt = require ("bcryptjs");
+const {createUser}=require("../validation/registration");
+const {StatusCodes}  = require("http-status-codes");
+
+const { loginUser } = require("../validation/login");
+
 
 const signUp = async (req, res) => {
-  console.log(req.body);
-  const { fullName, email, password } = req.body;
-  // empty field check
+  const { error, value } = createUser(req.body);
+  if (error) return res.status(StatusCodes.NOT_ACCEPTABLE).json({ error });
   try {
-    if (!email || !fullName || !password) {
-      res.status(404);
-      throw new Error("Please fill in name, email or password");
-    }
-    // user exist check
-    const userExists = await User.findOne({ email });
-    if (userExists) {
-      res.status(404);
-      throw new Error("User is already Registered");
-    }
-    //create user
-
-    const user = await User.create({
-      name: fullName,
-      email: email,
-      password: password,
-    });
-
-    //generate token
-    const token = await user.createJWT();
-
-    //send http-only cookie
-    res.cookie("token", token, {
-      path: "/",
-      httpOnly: true,
-      expires: new Date(Date.now() + 1000 * 86400),
-      sameSite: "none",
-      secure: true,
-    });
-
-    // display user
-    if (user) {
-      const professionals = await Professional.find({}).select("-password");
-      res.status(201).json({
-        status: "success",
-        loggedIn: true,
-        professionals,
-      });
+    const userExist = await User.findOne({ email: value.email });
+    if (userExist) {
+      res.status(StatusCodes.FORBIDDEN).send("existing user");
     } else {
-      res.status(404);
-      throw new Error("Email is Already Registered");
+      const salt = await bcrypt.genSalt();
+      const hashedPassword = await bcrypt.hash(value.password, salt);
+      const user = new User({
+        fullName: value.fullName,
+        email: value.email,
+        password: hashedPassword,
+        createdAt: new Date(),
+      });
+      user.save();
+
+      res.status(StatusCodes.CREATED).json({
+          message: "user created successfully"
+      });
     }
   } catch (error) {
-    res.status(400).json({
-      status: "Error",
-      message: error.message,
-    });
+    console.log(error);
+    res.status(StatusCodes.BAD_REQUEST).send("user creation failed");
   }
 };
 
 const login = async (req, res) => {
-  const { email, password } = req.body;
-  // validate request
-  if (!email || !password) {
-    res.status(400);
-    throw new Error("Please add email and password");
-  }
-  // check if the user exists
-  const user = await User.findOne({ email });
-  if (!user) {
-    res.status(404);
-    throw new Error("User is not registered please sign up");
-  }
-  // check password
-  const isCorrectPassword = await user.comparePassword(password);
-  if (!isCorrectPassword) {
-    res.status(400);
-    throw new Error("Incorret password");
-  }
-  // generate token
-  const token = user.createJWT();
-  // send http-only token
-  res.cookie("token", token, {
-    path: "/",
-    httpOnly: true,
-    expires: new Date(Date.now() + 1000 * 86400),
-    sameSite: "none",
-    secure: true,
-  });
 
-  if (user && isCorrectPassword) {
-    const professionals = await Professional.find({}).select("-password");
-    res.status(201).json({
-      status: "success",
-      loggedIn: true,
-      professionals,
-    });
-  } else {
-    res.status(400);
-    throw new Error("Please Enter valid Credentials");
+  const { error, value } = loginUser(req.body);
+
+  if (error) {
+    return res.status(StatusCodes.NOT_ACCEPTABLE).json({ error });
+  }
+
+  try {
+    const user = await User.findOne({ email: value.email });
+
+
+    
+    if (!user) {
+      return res.status(StatusCodes.NOT_FOUND).send("User not found");
+    }
+
+    const isMatch = await bcrypt.compare(value.password, user.password);
+
+    console.log(isMatch)
+
+    if (isMatch) {
+      return res.status(StatusCodes.UNAUTHORIZED).send("Invalid password right here");
+    }
+
+    // User is authenticated
+    res.status(StatusCodes.OK).send("User logged in successfully");
+  } catch (error) {
+    console.log(error);
+    res.status(StatusCodes.BAD_REQUEST).send("Login failed");
   }
 };
 
