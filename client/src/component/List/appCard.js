@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const AppCard = (props) => {
   const {info} = props
   const {_id, name, email, location, Phone, Profession, rating, image } = info
-  console.log(info);
 
   return (
     <div key={_id} className="app-card">
@@ -33,9 +32,8 @@ const AppCard = (props) => {
 
         </div>
       </div>
-      <Link to="/usersignup">
+      <Link to="/ratedProfessional">
         <button className="viewBtn">View</button>
-
       </Link>
     </div>
   );

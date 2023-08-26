@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import List from "../List/App";
+import Card from "../card/component/App";
+import UserDashboard from "../userDashboard/App"
 
 export const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -23,14 +25,14 @@ export const Login = (props) => {
     }
 
     try {
-      const response = await axios
-        .post("http://localhost:8080/userlogin", {
-          email: email,
-          password: pass,
-        })
-        .then((response) => response.data);
+      // const response = await axios
+      //   .post("http://localhost:8080/userlogin", {
+      //     email: email,
+      //     password: pass,
+      //   })
+      //   .then((response) => response.data);
         setResponse(true)
-        setData(response)
+        // setData(response)
     } catch (error) {
       console.log("Error: " + error.message);
     }
@@ -79,11 +81,9 @@ export const Login = (props) => {
     );
   };
 
-
-  console.log(data)
   return (
     <div>
-        { response ? <List list = {data}/> : loginPage()}
+        { response ? <UserDashboard/> : loginPage()}
     </div>
   );
 };

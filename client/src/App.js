@@ -5,6 +5,9 @@ import ProfessionalApp from "./component/professionalSignUp/App";
 import Cards from "./component/card/component/App";
 import List from "./component/List/App"
 import UserSignUp from "./component/signUp/App"
+import Dashboard from "./component/professionalDashBoard/App"
+import UserDashboard from "./component/userDashboard/App"
+import ImageSlide from './component/imageslider/App.js'
 
 
 function App() {
@@ -18,6 +21,9 @@ function App() {
           <Route path="/allProfessional" element={<List/>}/>
           <Route path="/usersignup" element={<UserSignUp/>}/>
           <Route path="/professionalprofile" element={<Cards/>}/>
+          <Route path="/professionaldashboard" element={<Dashboard/>}/>
+          <Route path="/userdashboard" element={<UserDashboard/>}/>
+          <Route path="/imageslider" element={<ImageSlide/>}/>
         </Routes>
     </div>
   );

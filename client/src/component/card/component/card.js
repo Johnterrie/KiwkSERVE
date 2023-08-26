@@ -1,5 +1,6 @@
 import stock from "./person.jpg";
 import "./card.css";
+import { Link } from "react-router-dom";
 
 function Profile() {
   return (
@@ -43,8 +44,12 @@ function Profile() {
               <h3>Address</h3>
               <p>Lagos, Nigeria</p>
             </div>
-
-            <p className="rating">Rate Me here..</p>
+            <div className="rating-dv">
+              <p className="rating">Rate Me..</p>
+              <Link to="/usersignup">
+                <p className="rating">Book Me..</p>
+              </Link>
+            </div>
           </div>
           <div className="right-inner">
             <h2>Photos:</h2>
