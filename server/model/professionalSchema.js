@@ -9,20 +9,24 @@ const ProfessionalSchema = new mongoose.Schema({
     maxlength: 20,
   },
 
-  phoneNumber: Number,
+  PhoneNumber: Number,
 
-  profession: String,
+  Profession: String,
 
   location: String,
 
   email: {
     type: String,
-    required: [true, "Email is Required"],
+    // required: [true, "Email is Required"],
     unique: true,
     email: true,
   },
 
   password: String,
+
+  image: {
+    type: String
+  }
 });
 
 //password encryption

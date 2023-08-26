@@ -48,6 +48,9 @@ button {
   margin-top: 10px;
   background: none;
   color: #fff;
+  text-decoration: none;
+}
+.link-btn:hover { 
   text-decoration: underline;
 }
 
