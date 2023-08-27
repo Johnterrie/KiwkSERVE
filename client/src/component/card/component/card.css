@@ -77,12 +77,22 @@ body{
   border: 1px solid rgb(22, 12, 106);
   background-color: rgb(73, 60, 188) ;
   padding: 10px;
-  margin-top: 10px;
+  margin: 10px 10px 0 0;
   color: #edf6ff;
   border-radius: 20px;
   font-size: 10px;
 }
 
 .rating:hover {
+  cursor: pointer;
+  background-color: rgb(178, 136, 217);
+}
+
+.rating-dv {
+  display: flex;
+}
+
+.image-div-one:hover {
+  box-shadow: 5px 10px #888888;
   cursor: pointer;
 }
