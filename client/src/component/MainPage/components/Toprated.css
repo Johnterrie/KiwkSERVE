@@ -14,13 +14,12 @@
 
 .toprated .topratedtitle {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: 900;
+  
   color: #482200;
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 50px;
 }
-
 .topratedList {
   height: auto;
   display: grid;
@@ -34,16 +33,16 @@
   border-radius: 15px;
   width: 300px;
   height: 350px;
-  margin: 20px;
+  margin: 20px; 
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  color: black;
+  color: black; 
 }
 .topratedcard:hover {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in;
   cursor: pointer;
-}
+} 
 
 .topratedcard div {
   border-top-left-radius: 15px;
