@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import './Styles.css'; 
+import './Styles-two.css'; 
 import Dashboard from './Dashboard';
 
 
