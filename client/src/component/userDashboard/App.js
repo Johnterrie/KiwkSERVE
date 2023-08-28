@@ -1,10 +1,10 @@
 import './App.css';
-import Overview from './component/overview';
+// import Overview from './component/overview';
 
 const App = () => {
   return(
     <div className='App'>
-        <Overview />
+        {/* <Overview /> */}
         </div>
   )
 }
