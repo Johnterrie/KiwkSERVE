@@ -42,7 +42,9 @@ li {
 }
 
 .sidebar li:hover {
-  background-color: #30475e;
+  background-color: #fff;
+  color: #0671b7;
+  /* width: 15px; */
   border-radius: 5px;
   padding-left: 15px;
 }
@@ -77,10 +79,10 @@ li {
 }
 .notification-icon {
   padding: 10px;
-  color: #1f2d3d;
+  color: #0671b7;
   float: right;
-  margin-right: 19rem;
-  margin-top: -2.6rem;
+  margin-right: 18rem;
+  margin-top: -2.2rem;
   font-size: 18px;
 }
 
@@ -93,36 +95,27 @@ li {
   font-size: 20px;
 }
 
-.search-bar input {
-  padding: 10px;
-  border: 2px solid #fff;
-  border-top: 2px solid #1f2d3d;
-  border-bottom: 2px solid #30475e;
-  border-radius: 8px;
-  width: 60%;
-  max-width: 300px;
-  font-size: 16px;
-  color: #fff;
-  transition: border-color 0.3s, background-color 0.3s;
-  background-color: transparent;
-  width: 100%;
-}
-
-.search-bar input::placeholder {
-  color: #fff;
-}
-
-.search-bar input:focus {
-  outline: none;
-  border-color: #fff;
-  background-color: #30475e;
-  border: 2px solid #fff;
-}
-
 .content-section {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+}
+
+.top-texts h3 {
+  color: #000000;
+  font-weight: 700;
+}
+
+.search-bar input {
+  height: 5vh;
+  width: 30%;
+  border: none;
+  font-weight: 500;
+}
+.search-bar p {
+  margin-top: -2.2rem;
+  margin-left: 15rem;
+  color: #0671b7;
 }
 
 .long-width-container {
@@ -152,7 +145,7 @@ li {
 .short-width-container {
   flex: 1;
   width: 50vw;
-  color: #2f2d2d;
+  color: black;
   border: 2px solid #9c9c9c4d;
   padding: 35px;
   margin-bottom: 20px;
@@ -171,6 +164,16 @@ li {
   margin-left: 3.6rem;
 }
 
+.short-width-container h3 {
+  color: #000000;
+  margin-right: 21px;
+  font-weight: 600;
+}
+.short-width-container p {
+  opacity: 0.5;
+  font-weight: 550;
+}
+
 .short-width-container:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -182,6 +185,8 @@ li {
   left: 8rem;
   margin: 0;
   padding: 0;
+  font-weight: 550;
+  opacity: 0.5;
 }
 
 .long-width-container span {
@@ -190,6 +195,7 @@ li {
   left: 20.5rem;
   margin: 0;
   padding: 0;
+  font-weight: 700;
 }
 .long-width-container h4 {
   position: absolute;
@@ -198,7 +204,9 @@ li {
   margin: 0;
   padding: 0;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 550;
+  opacity: 0.5;
+  color: black;
 }
 
 .long-width-container h5 {
@@ -208,7 +216,9 @@ li {
   margin: 0;
   padding: 0;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 550;
+  opacity: 0.5;
+  color: black;
 }
 
 .long-width-container h6 {
@@ -241,6 +251,10 @@ li {
   padding: 0;
   font-size: 15px;
   font-weight: 400;
+}
+
+.all-profile {
+  border: 1px solid red;
 }
 
 .all-profile .pg-text {
@@ -287,6 +301,7 @@ li {
 }
 
 .info-container {
+  border: 1px solid red;
   width: 65%;
   border: 1px solid #ccc;
   padding: 20px;
@@ -390,9 +405,10 @@ li {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.accept, .reject {
+.accept,
+.reject {
   color: #ffffff;
-  background-color:  #0671b7;
+  background-color: #0671b7;
   height: 55px;
   margin-left: 10px;
 }

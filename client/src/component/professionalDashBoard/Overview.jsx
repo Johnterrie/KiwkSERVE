@@ -6,7 +6,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Overview = () => {
   return (
     <div>
+       <div className="search-bar">
+        <input type="text" placeholder="Search..." />
+        <p><FontAwesomeIcon icon={faSearch} /></p>
+        </div>
+        <div className="notification-icon">
+          <FontAwesomeIcon icon={faBell} />
+        </div>
       <section className="overview-container">
+
         <div className="short-width-container">
           <h3>5</h3>
           <p>Completed</p>
