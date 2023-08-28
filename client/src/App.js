@@ -8,6 +8,7 @@ import UserSignUp from "./component/signUp/App"
 import Dashboard from "./component/professionalDashBoard/App"
 import UserDashboard from "./component/userDashboard/App"
 import ImageSlide from './component/imageslider/App.js'
+import Maintenance from "./maintenance";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/professionaldashboard" element={<Dashboard/>}/>
           <Route path="/userdashboard" element={<UserDashboard/>}/>
           <Route path="/imageslider" element={<ImageSlide/>}/>
+          <Route path="/maintenance" element={<Maintenance/>}/>
         </Routes>
     </div>
   );

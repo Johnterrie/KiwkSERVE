@@ -1,4 +1,10 @@
-body, h1, h2, h3, p, ul, li {
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -11,7 +17,7 @@ body, h1, h2, h3, p, ul, li {
 
 .sidebar {
   flex: 0 0 200px;
-  background-color: #1f2d3d; 
+  background-color: #1f2d3d;
   color: #fff;
   padding-top: 40px;
 }
@@ -31,11 +37,13 @@ body, h1, h2, h3, p, ul, li {
   display: flex;
 }
 
-
+.message-div {
+  color: #000000;
+}
 
 .sidebar li:hover {
-  background-color: #30475e; 
-  border-radius: 5px; 
+  background-color: #30475e;
+  border-radius: 5px;
   padding-left: 15px;
 }
 
@@ -55,7 +63,7 @@ body, h1, h2, h3, p, ul, li {
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 .widget h2 {
@@ -67,36 +75,13 @@ body, h1, h2, h3, p, ul, li {
   font-size: 14px;
   color: #555;
 }
-
-.search-bar {
-   margin-left: auto;
-   margin-right: auto;
-   margin-top: -5rem;
-   text-align: center;
-   display: flex;
-   align-items: center;
-   background-color: #1f2d3d;
-   border-radius: 8px;
-   width: 100%;
-   max-width: 300px;
- } 
-
-
-.search-icon {
-  padding: 10px;
-  color: #fff; 
-  margin-right: 10px;
-  /* position: relative; */
-}
-
 .notification-icon {
   padding: 10px;
   color: #1f2d3d;
-  float: right; 
+  float: right;
   margin-right: 19rem;
   margin-top: -2.6rem;
   font-size: 18px;
-  
 }
 
 .top-texts {
@@ -104,24 +89,24 @@ body, h1, h2, h3, p, ul, li {
 }
 
 .overview-heading {
- margin-right: 4.8rem;
- font-size: 20px;
+  margin-right: 4.8rem;
+  font-size: 20px;
 }
 
- .search-bar input {
-  padding: 10px; 
+.search-bar input {
+  padding: 10px;
   border: 2px solid #fff;
   border-top: 2px solid #1f2d3d;
   border-bottom: 2px solid #30475e;
   border-radius: 8px;
   width: 60%;
   max-width: 300px;
-  font-size: 16px; 
+  font-size: 16px;
   color: #fff;
   transition: border-color 0.3s, background-color 0.3s;
   background-color: transparent;
-  width: 100%; 
- }
+  width: 100%;
+}
 
 .search-bar input::placeholder {
   color: #fff;
@@ -136,19 +121,19 @@ body, h1, h2, h3, p, ul, li {
 
 .content-section {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
 .long-width-container {
   flex: 1;
-  background-color: #1f2d3d;
-  color: #fff;
+  border: 2px solid #9c9c9c4d;
+  color: #000000;
   padding: 25px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   border-radius: 10px;
-  margin-top: 15px; 
-  position: relative; 
+  margin-top: 15px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,49 +151,50 @@ body, h1, h2, h3, p, ul, li {
 
 .short-width-container {
   flex: 1;
-  background-color: #1f2d3d;
-  color: #fff;
+  width: 50vw;
+  color: #2f2d2d;
+  border: 2px solid #9c9c9c4d;
   padding: 35px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   border-radius: 10px;
-  margin-top: 15px; 
-  position: relative; 
+  margin-top: 15px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px; 
+  width: 200px;
   max-width: 200px;
   height: 120px;
-  transition: transform 0.2s, box-shadow 0.2s; 
+  transition: transform 0.2s, box-shadow 0.2s;
   margin-top: 3.7rem;
   margin-left: 3.6rem;
 }
 
 .short-width-container:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .long-width-container p {
-  position: absolute; 
-  bottom: 16px; 
-  left: 8rem; 
+  position: absolute;
+  bottom: 16px;
+  left: 8rem;
   margin: 0;
   padding: 0;
 }
 
 .long-width-container span {
-  position: absolute; 
-  bottom: 16px; 
-  left: 20.5rem; 
+  position: absolute;
+  bottom: 16px;
+  left: 20.5rem;
   margin: 0;
   padding: 0;
 }
 .long-width-container h4 {
-  position: absolute; 
-  bottom: 16.8px; 
-  left: 30rem; 
+  position: absolute;
+  bottom: 16.8px;
+  left: 30rem;
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -216,8 +202,8 @@ body, h1, h2, h3, p, ul, li {
 }
 
 .long-width-container h5 {
-  position: absolute; 
-  bottom: 16.8px; 
+  position: absolute;
+  bottom: 16.8px;
   left: 40rem;
   margin: 0;
   padding: 0;
@@ -226,9 +212,9 @@ body, h1, h2, h3, p, ul, li {
 }
 
 .long-width-container h6 {
-  position: absolute; 
-  bottom: 16.8px; 
-  left: 50rem; 
+  position: absolute;
+  bottom: 16.8px;
+  left: 50rem;
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -237,9 +223,9 @@ body, h1, h2, h3, p, ul, li {
 }
 
 .long-width-container h3 {
-  position: absolute; 
-  bottom: 16.8px; 
-  left: 55rem; 
+  position: absolute;
+  bottom: 16.8px;
+  left: 55rem;
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -248,52 +234,40 @@ body, h1, h2, h3, p, ul, li {
 }
 
 .long-width-container h2 {
-  position: absolute; 
-  bottom: 16.8px; 
-  left: 58.5rem; 
+  position: absolute;
+  bottom: 16.8px;
+  left: 58.5rem;
   margin: 0;
   padding: 0;
   font-size: 15px;
   font-weight: 400;
-  /* color: ; */
 }
 
 .all-profile .pg-text {
   margin-right: auto;
   margin-right: 51rem;
   font-size: 20px;
-
 }
 
 .photo-upload-container {
   width: 200px;
-  height: 300px; 
+  height: 300px;
   border: 1px solid #ccc;
   padding: 20px;
   margin-top: 20px;
   border-radius: 5px;
-  float: left; 
+  float: left;
 }
-
-/* .photo-upload-container p {
-  margin-bottom: auto;
-  padding: 5px;
-  font-size: 13px;
-} */
 
 .uploaded-image {
-  margin-top: 10px; 
-  text-align: center; 
+  margin-top: 10px;
+  text-align: center;
 }
 .uploaded-image img {
-  max-width: 55%; 
+  max-width: 55%;
   height: auto;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
 }
-
-/* .photo-upload-container input[type="file"] {
-  margin-top: 10px; 
-} */
 
 .upload-label {
   display: inline-block;
@@ -306,30 +280,11 @@ body, h1, h2, h3, p, ul, li {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  text-align: center; 
+  text-align: center;
 }
 .upload-label:hover {
   background-color: #30475e;
 }
-
-/* .edit-profile-container {
-  flex: 1;
-   border: 1px solid black; 
-  background-color: #1f2d3d;
-  color: #fff;
-  padding: 25px;
-  margin-bottom: 20px; 
-  margin-top: 15px; 
-  position: relative; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 65%;
-  height: 80vh;
-  margin-left: auto;
-  
-} */
 
 .info-container {
   width: 65%;
@@ -337,8 +292,8 @@ body, h1, h2, h3, p, ul, li {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  float: right; 
-  margin-right: 20px; 
+  float: right;
+  margin-right: 20px;
   margin-top: 1.3rem;
 }
 
@@ -380,7 +335,7 @@ body, h1, h2, h3, p, ul, li {
 
 .first-input button {
   display: inline-block;
-  /* margin-top: 20px; */
+  width: 50vw;
   padding: 10px 20px;
   background-color: #1f2d3d;
   color: #fff;
@@ -389,54 +344,55 @@ body, h1, h2, h3, p, ul, li {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  text-align: center; 
+  text-align: center;
   float: left;
 }
 
 .first-input button:hover {
+  width: 30vw;
   background-color: #30475e;
 }
 
 .settings-container {
   flex: 1;
-  background-color: #1f2d3d;
+  background-color: #2c6890;
   color: #fff;
   padding: 25px;
-  /* margin-bottom: 20px;  */
   border-radius: 10px;
-  margin-top: 15px; 
-  position: relative; 
+  margin-top: 15px;
+  position: relative;
   display: flex;
-  transition: all 0.2s ease-in-out; 
+  transition: all 0.2s ease-in-out;
   flex-direction: column;
   justify-content: left;
-  /* align-items: center; */
+}
+
+.lefty-things {
+  text-align: left;
+  font-size: 25px;
 }
 
 .settings-container h3 {
-  float: left; 
-  margin-right: auto; 
+  float: left;
+  margin-right: auto;
   margin-left: 20px;
 }
 
 .settings-container-page h2 {
+  border: 1px solid white;
   font-size: 20px;
 }
 
 .settings-container:hover {
   transform: scale(0.9);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  font-size: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.accept, .reject {
+  color: #ffffff;
+  background-color:  #0671b7;
+  height: 55px;
+  margin-left: 10px;
+}
