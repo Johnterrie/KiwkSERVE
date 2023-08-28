@@ -4,7 +4,7 @@ import Overview from './overview';
 const App = () => {
   return(
     <div className='App'>
-        <Overview />
+        {/* <Overview /> */}
         </div>
   )
 }

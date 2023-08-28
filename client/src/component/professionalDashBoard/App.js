@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
-import './Styles-two.css'; 
+import './Styles.css'; 
 import Dashboard from './Dashboard';
+
+
+import './Styles-two.css'; 
 
 
 function App() {

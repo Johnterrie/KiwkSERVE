@@ -1,15 +1,22 @@
 .caro{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    margin-right: 30px;
+    opacity:2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 7rem;
     margin-right: -10rem;
     padding-left: 31rem;
 } 
-
+.w-100{
+    background-image: linear-gradient(to bottom, #000000be,#000000be);
+}
 .x{
     height: 580px;
 }  
 
 .caro .title{
+
+    margin-right: 70px;
     width:570px ;
     font-size: 3.3rem;
     color: #3ba1e6;
@@ -23,11 +30,21 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size:30px ;
     text-align: left;
     font-weight: 700;
+    background-color: black;
+    opacity: 0.7;
+    padding: 0 10px;
+    border-radius:5px ;
+    
 }
 .caro #para{
     font-size: 30px;
     text-align: left;
     font-weight: 700;
+    background-color: black;
+    opacity: 0.7; 
+    padding: 0 10px;
+    border-radius:5px ;
+    
 }
 .btnsee{
     width: 300px;
@@ -38,7 +55,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     color: #ffffff;
     bottom:9rem ;
-    left: 9.6rem;
+    left: 12.4rem;
 }
 .btnsee:hover{
     background-color: #2b5068;
@@ -46,4 +63,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .section-one {
     width: 100vw;
+}
+.y{
+    background-color: black;
 }

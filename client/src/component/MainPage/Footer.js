@@ -1,49 +1,118 @@
-import React from 'react'
-import "./Footer.css";
+import React from "react";
+import "../MainPage/Footer.css";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import footerbgimg from "../MainPage/footerbg.png";
 
 function Footer() {
-  return (
-    <div id='footer'>
+    return (
+        <>
+            <div class="section-footer">
+                <div
+                    class="footer"
+                    style={{
+                        backgroundImage: ` linear-gradient(to bottom, #000000be,#000000be), url(${footerbgimg})`,
+                    }}
+                >
+                    <div className="secondnewsletter">
+                        <h2 className="subtitle">Subscribe to our newsletter</h2>
+                        <p>
+                            Get regular update on our new services and new professionals
+                            signed up with the specific
+                            <br />
+                            service they provide. we can also mail you special offers and
+                            inform you about new features.
+                        </p>
+                        <div>
+                            <input type="text" placeholder="Enter email" className="email"></input>
+                            <button className="btnsubscribe">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom footer">
+                    <div class="innerfooter">
+                        <div id="kwikserve" className="foot">
+                            <h2 class="top">Kwikserve.com</h2>
 
-      <div id="kwikserve" className='foot'>
+                            <p>
+                                Kwikserve is a place where you can find any kind
+                                <br />
+                                of services your house or office may need.
+                                <br />
+                                our services are affordable and fast. <br />
+                                <br />
+                                Copyright &copy; 2023 Kwikserve all rights reserved.
+                            </p>
+                        </div>
+                        <div class="bro">
+                            <h2>About</h2>
+                            <ul>
+                                <li>Menu</li>
+                                <li>Features</li>
+                                <li>Help & Supports</li>
+                            </ul>
+                        </div>
 
-        <h2 class="top">Kwikserve.com</h2>
+                        <div class="bro">
+                            <h2>Socials</h2>
+                            <ul>
+                                <li><a href="#"><FaFacebook /> Facebook</a><br /></li>
+                                <li><a href="#"><FaTwitter /> Twitter</a><br /></li>
+                                <li><a href="#"><FaInstagram /> Instagram</a></li>
+                            </ul>
+                        </div>
 
-        <p>
-          Kwikserve is a place where you can find any kind<br/>of services your
-          house or office may need.<br/>our services are affordable and fast. <br />
-          Copyright &copy; 2023 inferno all rights reserved.
-        </p>
+                        <div class="bro">
+                            <h2>Contact</h2>
+                            <ul class="menu">
+                                <li>+2347035695164</li>
+                                <li>kwikserve@gmail.com</li>
+                            </ul>
+                        </div>
 
-      </div>
 
-      <div id="contact" className='foot'>
-
-        <h2 class="top"> Contact Us</h2>
-
-        Email:<a href="">Kwikserve@gmail.com</a>
-
-        <br />
-        Tel:+342-5324-9454
-        <br />
-        Address:2384 street,NYC.
-
-      </div>
-
-      <div id="socials" className='foot'>
-
-        <h2 class="top">Socials</h2>
-
-        <a href="#">Facebook</a><br />
-
-        <a href="#">Twitter</a><br />
-
-        <a href="#">Instagram</a>
-        
-      </div>
-
-    </div>
-  )
+                        {/* <div class="about details">
+                      <h2>About</h2>
+                      <ul class="menu">
+                          <li>Menu</li>
+                          <li>Features</li>
+                          <li>Help & Supports</li>
+                      </ul>
+                    </div> */}
+                        {/* <div class="about details">
+              <h2>Socials</h2>
+              <ul class="menu">
+                <li>
+                  <a href="#">
+                    <FaFacebook /> Facebook
+                  </a>
+                  <br />
+                </li>
+                <li>
+                  <a href="#">
+                    <FaTwitter /> Twitter
+                  </a>
+                  <br />
+                </li>
+                <li>
+                  <a href="#">
+                    <FaInstagram /> Instagram
+                  </a>
+                </li>
+              </ul>
+            </div> */}
+                        {/* <div class="about details">
+              <h2>Contact Us</h2>
+              <ul class="menu">
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li> 
+                <li>+2347035695164</li>
+                <li>kwikserve@gmail.com</li>
+              </ul> 
+            </div>  */}
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }
 
-export default Footer
+export default Footer;
