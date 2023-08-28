@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 import React from "react";
 import "./Header.css";
-// import image1 from "./construction-workers-sunset.jpg"
-// import image2 from "./car-being-taking-care-workshop.jpg"
-// import image3 from "./photo-mixed-race-boy-girl-classmates-watch-tutorial-video-together-laptop-computer.jpg"
-// import image4 from "./side-view-man-cleaning-shelf.jpg"
-// import image5 from "./worker-is-cutting-wires-with-lineman-s-pliers.jpg"
 
 function Header() {
   return (
@@ -45,7 +40,7 @@ function Header() {
                 At kwikserve we are determined in providing the best service to
                 meet your need at the quickest time.
               </p>
-            </Carousel.Caption>
+            </Carousel.Caption> 
           </Carousel.Item>
           <Carousel.Item className="x">
             <img
@@ -62,9 +57,10 @@ function Header() {
                 At kwikserve we are determined in providing the best service to
                 meet your need at the quickest time.
               </p>
-            </Carousel.Caption>
+            </Carousel.Caption> 
           </Carousel.Item>
         </Carousel>
+      
         <Link to="allProfessional">
           <button className="btnsee">View all Professionals</button>
         </Link>

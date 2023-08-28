@@ -8,7 +8,7 @@ const { signUpProfessional, loginProfessional} = require("../controller/Professi
 const multer = require("multer")
 const upload = multer({dest:"image/"})
 
-router.post("/signupprofessional", signUpProfessional)
+router.post("/signupprofessional", upload.single("image"), signUpProfessional)
 router.post("/loginprofessional", loginProfessional)
 router.post('/usersignup', signUp);
 router.post('/userlogin', login);
