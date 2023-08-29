@@ -22,12 +22,14 @@ function Footer() {
                             service they provide. we can also mail you special offers and
                             inform you about new features.
                         </p>
-                        <div>
+
+                        <div className="index-index">
                             <input type="text" placeholder="Enter email" className="email"></input>
                             <button className="btnsubscribe">Subscribe</button>
                         </div>
                     </div>
                 </div>
+                
                 <div class="bottom footer">
                     <div class="innerfooter">
                         <div id="kwikserve" className="foot">
@@ -68,46 +70,6 @@ function Footer() {
                                 <li>kwikserve@gmail.com</li>
                             </ul>
                         </div>
-
-
-                        {/* <div class="about details">
-                      <h2>About</h2>
-                      <ul class="menu">
-                          <li>Menu</li>
-                          <li>Features</li>
-                          <li>Help & Supports</li>
-                      </ul>
-                    </div> */}
-                        {/* <div class="about details">
-              <h2>Socials</h2>
-              <ul class="menu">
-                <li>
-                  <a href="#">
-                    <FaFacebook /> Facebook
-                  </a>
-                  <br />
-                </li>
-                <li>
-                  <a href="#">
-                    <FaTwitter /> Twitter
-                  </a>
-                  <br />
-                </li>
-                <li>
-                  <a href="#">
-                    <FaInstagram /> Instagram
-                  </a>
-                </li>
-              </ul>
-            </div> */}
-                        {/* <div class="about details">
-              <h2>Contact Us</h2>
-              <ul class="menu">
-                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li> 
-                <li>+2347035695164</li>
-                <li>kwikserve@gmail.com</li>
-              </ul> 
-            </div>  */}
                     </div>
                 </div>
             </div>
