@@ -3,14 +3,13 @@
     
 }
 .footer{
-    
+    height: 60vh;
     width: 100%;
-    height: 380px;
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image:linear-gradient( #000000be,grey);
+    background-color:  rgba(31, 30, 30, 0.8);
 }
 .footer img{
     height: 500px;
@@ -31,10 +30,9 @@
     height: 40px;
     color: white;
     background-color: grey;
-    margin-top: 20px;
 }
 
-.bottom.footer{
+.bottom .footer{
     width: 100%;
     height: 55vh;
 } 
@@ -42,8 +40,9 @@
     width: 100%;
     height: 55vh;
     background-color:  rgba(31, 30, 30, 0.8);
-    padding-left:9%;  
+    /* padding-left:9%;   */
     display: flex;
+    padding: 100px 100px;
 }
 .about{
     color: white;
@@ -54,6 +53,10 @@
 } 
 
 .secondnewsletter{
+    height: 38vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     margin-bottom: 5rem;
     margin: auto;
@@ -62,18 +65,24 @@
 .secondnewsletter h2{
     color: #2781bd;
 }
+
+.index-index {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .secondnewsletter p{
     font-size: 20px;
 }
 
 .email{
-    border: 2px solid #2781bd ;
-    margin-top: 20px; 
+    border: 2px solid #2781bd;
     width: 25rem;
-    height: 3.6rem;
-    position: absolute;
-    margin-left:-8.5rem ;  
-    /* bottom: 200px; */
+    position: relative;
+    top: 10px;
 } 
 
 .btnsubscribe{
@@ -82,11 +91,7 @@
     font-size: 18px;
     border-radius: 5px;
     background-color: #4682a9;
-    position: relative;
     color: #ffffff;
-    position: relative;
-    left: 9.9rem;
-    top: 13.8px;
 } 
 
 .btnsubscribe:hover{
