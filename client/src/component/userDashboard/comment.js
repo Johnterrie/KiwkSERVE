@@ -10,32 +10,6 @@ function Comment() {
     return (
       <div className="App">
       <div className="main">
-        <div className="sidebar">
-          <h2>Users Dashboard</h2>
-          <div className="list">
-            <h3>
-              <FontAwesomeIcon icon={faHome} className="icon"  />
-              <Link to="/" style={{textDecoration:'none'}}>Overview</Link>
-            </h3>
-            <h3 className="book">
-              <FontAwesomeIcon icon={faChartBar} className="icon"  />
-              <Link to="/bookings" style={{textDecoration:'none'}}>Book a Service</Link>
-            </h3>
-            <h3>
-              <FontAwesomeIcon icon={faUsers} className="icon"  />
-              <Link to="/profile" style={{textDecoration:'none'}}>Profile</Link>
-            </h3>
-            <h3>
-              <FontAwesomeIcon icon={faComment} className="icon" />
-              <Link to="/comment" style={{ textDecoration: 'none' }}> Comment</Link>
-            </h3>
-            <h3>
-              <FontAwesomeIcon icon={faCog} className="icon" />
-              <Link to="/settings" style={{ textDecoration: 'none' }}>Settings</Link>
-            </h3>
-          </div>
-        </div>
-
         <div className="main-bar">
 
           <div className="top-bar">

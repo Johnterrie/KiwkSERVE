@@ -4,7 +4,7 @@ import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import List from "../List/App";
 import Card from "../card/component/App";
-import UserDashboard from "../userDashboard/App"
+import UserDashBoard from "../userDashboard/App"
 
 export const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -12,7 +12,7 @@ export const Login = (props) => {
   const [error, setError] = useState("");
   const [data, setData] = useState("");
   const [success, setSuccess] = useState("");
-  const [response, setResponse] = useState(false);
+  const [response, setResponse] = useState(true);
 
 
   const handleSubmit = async (e) => {
@@ -83,7 +83,7 @@ export const Login = (props) => {
 
   return (
     <div>
-        { response ? <UserDashboard/> : loginPage()}
+        { response ? <UserDashBoard/> : loginPage()}
     </div>
   );
 };

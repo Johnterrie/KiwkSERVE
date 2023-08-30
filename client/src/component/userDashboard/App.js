@@ -1,10 +1,10 @@
 import './App.css';
-import Overview from './overview';
+import Dashboard from './Dashboard';
 
 const App = () => {
   return(
     <div className='App'>
-        {/* <Overview /> */}
+        <Dashboard />
         </div>
   )
 }
