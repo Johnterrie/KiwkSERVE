@@ -10,17 +10,17 @@ const Sidebar = ({ setPage }) => {
           <FontAwesomeIcon icon={faHome} /> Overview
         </li>
         <li onClick={() => setPage('Bookings')}>
-          <FontAwesomeIcon icon={faUsers} /> Bookings
+          <FontAwesomeIcon icon={faUsers} /> Book a Professional
         </li>
-        <li onClick={() => setPage('Profile')}>
+        {/* <li onClick={() => setPage('Profile')}>
           <FontAwesomeIcon icon={faChartBar} /> Profile
-        </li>
+        </li> */}
         <li onClick={() => setPage('messages')}>
           <FontAwesomeIcon icon={faEnvelope} /> Comments
         </li>
-        <li onClick={() => setPage('Settings')}>
+        {/* <li onClick={() => setPage('Settings')}>
           <FontAwesomeIcon icon={faCog} /> Settings
-        </li>
+        </li> */}
       </ul>
     </div>
   );

@@ -1,28 +1,33 @@
 export default [
     {
       "id": 1,
-      "title": "Getting Started with React",
-      "content": "Learn the basics of React and set up your development environment."
+      "name": "john ben",
+      "title": "Best App",
+      "content": "Brilliant app! It's like it was designed with me in mind. Such a joy to use!"
     },
     {
       "id": 2,
-      "title": "Advanced React Techniques",
-      "content": "Explore advanced concepts such as hooks, context, and performance optimization."
+      "name": "kate chueze",
+      "title": "Easy to Use",
+      "content": "The app is fantastic! Its sleek design and intuitive features have me hooked."
     },
     {
       "id": 3,
-      "title": "Mastering CSS Grid",
-      "content": "Dive deep into CSS Grid layout and create complex web layouts with ease."
+      "name": "john terry",
+      "title": "LifeSaving",
+      "content": "Absolutely love this app! It's incredibly user-friendly and has made my life so much easier."
     },
     {
       "id": 4,
-      "title": "JavaScript ES6 Features",
-      "content": "Discover the powerful features introduced in ECMAScript 2015 (ES6) for modern JavaScript development."
+      "name": "Shola Adewunmi",
+      "title": "A welcome Development",
+      "content": "Wow, what a gem of an app! It's truly a game-changer and I can't imagine my days without it."
     },
     {
       "id": 5,
-      "title": "Introduction to Node.js",
-      "content": "Learn the fundamentals of Node.js and build server-side applications using JavaScript."
+      "name": "femi oladele",
+      "title": "Great App",
+      "content": "This app is a must-have. It's powerful, efficient, and I can't get enough of its convenience."
     }
   ]
   

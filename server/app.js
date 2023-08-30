@@ -24,9 +24,8 @@ app.use(cors(corsOptions));
 
 app.use("/", router)
 app.listen(PORT, async() => {
-    await connectDB();
-
-    // Professionals.create(professionals)
-    
+    setInterval(() => {
+    connectDB();
+    }, 10000)
     console.log("server is running on port " + PORT)
 });

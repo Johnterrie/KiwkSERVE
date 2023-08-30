@@ -1,7 +1,7 @@
 .App-three {
   height: 100vh;
-  border: 1px solid red;
   color: #000000;
+  background-color: #ffffff;
   margin-top: 10vh;
 }
 
@@ -33,6 +33,7 @@
 .slider-cont {
   display: flex;
   width: 70vw;
+  background-color: #fffff;
   justify-content: center;
   align-items: center;
   height: 50vh;

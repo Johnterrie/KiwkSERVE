@@ -16,24 +16,30 @@ function App({post}) {
 
   return (
     <div className="blog-slider">
-      <h1>BLOG</h1>
+      <h1>Customer FeedBack</h1>
       <Slider className="slider-cont" {...settings}>
         {post.map((post) => (
           <div key={post.id} className="slider-blog">
-            <h2>{post.title}</h2>
-            <p>{post.content}</p>
+            <h1>{post.title}</h1>
+            <p> {post.content}</p>
+            <p> - {post.name} </p>
           </div>
         ))}
         {post.map((post) => (
           <div key={post.id} className="slider-blog">
-            <h2>{post.title}</h2>
+            <h1>{post.title}</h1>
             <p>{post.content}</p>
+            <p> - {post.name}</p>
+
           </div>
         ))}
         {post.map((post) => (
           <div key={post.id} className="slider-blog">
-            <h2>{post.title}</h2>
+            <h1>{post.title}</h1>
+            <p>{post.name}</p>
             <p>{post.content}</p>
+            <p> - {post.name}</p>
+
           </div>
         ))}
       </Slider>

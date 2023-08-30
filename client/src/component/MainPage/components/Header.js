@@ -60,10 +60,6 @@ function Header() {
             </Carousel.Caption> 
           </Carousel.Item>
         </Carousel>
-      
-        <Link to="allProfessional">
-          <button className="btnsee">View all Professionals</button>
-        </Link>
       </div>
     </>
   );

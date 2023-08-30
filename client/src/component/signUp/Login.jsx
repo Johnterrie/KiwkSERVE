@@ -12,11 +12,11 @@ export const Login = (props) => {
   const [error, setError] = useState("");
   const [data, setData] = useState("");
   const [success, setSuccess] = useState("");
-  const [response, setResponse] = useState(true);
+  const [response, setResponse] = useState(false);
 
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (email.trim() === "" || pass.trim() === "") {
       setError("Please fill all the Fields");
@@ -25,14 +25,14 @@ export const Login = (props) => {
     }
 
     try {
-      // const response = await axios
-      //   .post("http://localhost:8080/userlogin", {
-      //     email: email,
-      //     password: pass,
-      //   })
-      //   .then((response) => response.data);
+      const response = await axios
+        .post("http://localhost:8080/userlogin", {
+          email: email,
+          password: pass,
+        })
+        .then((response) => response.data);
         setResponse(true)
-        // setData(response)
+        setData(response)
     } catch (error) {
       console.log("Error: " + error.message);
     }
@@ -77,13 +77,14 @@ export const Login = (props) => {
         >
           Don't have an account? Register here.
         </div>
+
       </div>
     );
   };
 
   return (
     <div>
-        { response ? <UserDashBoard/> : loginPage()}
+        { response ? <UserDashBoard data = {data} /> : loginPage()}
     </div>
   );
 };

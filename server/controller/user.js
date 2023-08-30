@@ -23,6 +23,12 @@ const signUp = async (req, res) => {
       password: password,
     });
 
+    const userData = await User.findOne({ email });
+    if (!user) {
+      res.status(404);
+      throw new Error("User is not registered please sign up");
+    }
+
     //generate token
     const token = await user.createJWT();
 
@@ -39,9 +45,10 @@ const signUp = async (req, res) => {
     if (user) {
       const professionals = await Professional.find({}).select("-password");
       res.status(201).json({
-        status: "success",
-        loggedIn: true,
+        user: userData,
         professionals,
+        pending: 0,
+        completed: 0,
       });
     } else {
       res.status(404);
@@ -85,12 +92,16 @@ const login = async (req, res) => {
     secure: true,
   });
 
+  console.log(user);
+
   if (user && isCorrectPassword) {
     const professionals = await Professional.find({}).select("-password");
+
     res.status(201).json({
-      status: "success",
-      loggedIn: true,
+      user: user,
       professionals,
+      pending: 0,
+      completed: 0,
     });
   } else {
     res.status(400);
