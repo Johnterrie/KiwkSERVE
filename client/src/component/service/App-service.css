@@ -1,0 +1,45 @@
+.section-white {
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+  height: 70vh;
+}
+
+.section-subtitle {
+  font-weight: 900;
+}
+
+.main-two {
+  display: flex;
+  padding: 5vh 5vw;
+  justify-content: space-between;
+  gap: 50px;
+  width: 98%;
+  color: #000000;
+}
+
+.team-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.headined {
+  color: #000000;
+  font-weight: 900;
+  margin-top: 5vh;
+}
+
+.image-one{
+  width: 150px;
+  height: 150px;
+}
+
+.items {
+  border: ;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

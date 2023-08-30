@@ -16,7 +16,7 @@ const Sidebar = ({ setPage }) => {
           <FontAwesomeIcon icon={faChartBar} /> Profile
         </li>
         <li onClick={() => setPage('messages')}>
-          <FontAwesomeIcon icon={faEnvelope} /> Messages
+          <FontAwesomeIcon icon={faEnvelope} /> Comments
         </li>
         <li onClick={() => setPage('Settings')}>
           <FontAwesomeIcon icon={faCog} /> Settings
