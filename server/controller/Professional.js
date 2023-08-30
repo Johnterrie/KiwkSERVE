@@ -2,7 +2,7 @@ const  Professional  = require("../model/professionalSchema");
 
 const signUpProfessional = async (req, res) => {
   console.log(req.body)
-
+  https://github.com/Johnterrie/KiwkSERVE.git
   const { fullName, email, password, phoneNumber, location, profession } = req.body;
   // empty field check
   try {
@@ -59,6 +59,14 @@ const signUpProfessional = async (req, res) => {
    })
   }
 };
+
+
+
+
+
+
+
+
 
 const loginProfessional = async (req, res) => {
  const { email, password } = req.body;
