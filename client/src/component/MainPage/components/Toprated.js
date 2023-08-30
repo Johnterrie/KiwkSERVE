@@ -13,7 +13,7 @@ function Toprated() {
       <div className="topratedList">
         {TopratedList.map((topratedCard, key) => {
           return (
-            <Link to="/professionalprofile">
+            
               <TopratedCard
                 id={key}
                 image={topratedCard.image}
@@ -21,7 +21,6 @@ function Toprated() {
                 occupation={topratedCard.occupation}
                 location={topratedCard.location}
               />
-            </Link>
           );
         })}
       </div>

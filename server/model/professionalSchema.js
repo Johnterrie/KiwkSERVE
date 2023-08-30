@@ -9,9 +9,9 @@ const ProfessionalSchema = new mongoose.Schema({
     maxlength: 20,
   },
 
-  PhoneNumber: Number,
+  phoneNumber: Number,
 
-  Profession: String,
+  profession: String,
 
   location: String,
 

@@ -7,7 +7,10 @@ import Dashboard from './Dashboard';
 import './Styles-two.css'; 
 
 
-function App() {
+function App({data}) {
+
+  console.log(data)
+  
   return (
     <div className="App">
       <Dashboard />

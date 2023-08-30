@@ -27,7 +27,7 @@ const signUpProfessional = async (req, res) => {
       profession: profession,
       phoneNumber: phoneNumber,
       image: req.file.path, 
-    });
+    }).select("-password");
 
     //generate token
     const token = user.createJWT();
@@ -47,6 +47,7 @@ const signUpProfessional = async (req, res) => {
         status: "success",
         loggedIn: true,
         professionals,
+        user
       });
     } else {
       res.status(404);

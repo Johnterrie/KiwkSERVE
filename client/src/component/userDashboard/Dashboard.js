@@ -6,21 +6,22 @@ import Overview from './overview'
 import Profile from './profile'
 import Settings from "./settings"
 
-const Dashboard = () => {
+const Dashboard = ({professionals, user, pending, completed}) => {
     const [currentPage, setCurrentPage] = useState('overview');
   
+
     const renderPage = () => {
       switch (currentPage) {
         case 'overview':
-          return <Overview />;
+          return <Overview user={user} pending = {pending} completed = {completed} />;
           case 'Bookings': 
-          return <Bookings />;
+          return <Bookings user={user}  professionals = {professionals} />;
         case 'Profile':
-          return <Profile />;
+          return <Profile user = {user} />;
         case 'Settings':
-          return <Settings />;
+          return <Settings user={user} />;
         case 'messages': 
-          return <Comment />;
+          return <Comment user={user} />;
         default:
           return null;
       }

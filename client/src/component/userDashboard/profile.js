@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
-import profile from "./profile.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome, faChartBar, faCog, faUsers, faSearch, faComment,
-} from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react'
+import Topbar from "./Top";
 
-const Profile = () => {
+
+const Profile = ({user}) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [fullName, setFullName] = useState("");
   const [UserName, setUserName] = useState("");
@@ -20,24 +16,13 @@ const Profile = () => {
     setSelectedFile(file);
   };
 
-  const submit = async (e) =>{
-    e.preventDefault();
-  }
+  
 
   return (
     <div className="App">
       <div className="main">   
         <div className="main-bar">
-          <div className="top-bar">
-            <div className="bar">
-              <input className="input" type="text" placeholder="Search" />
-              <FontAwesomeIcon icon={faSearch} className="search" />
-            </div>
-            <div className="img">
-              <img className="image" src={profile} alt="man" />
-              <h4>Darasimi Ayoola</h4>
-            </div>
-          </div>
+          <Topbar user={user} />
 
           <div class="profile">
             <div className="picture-bar">

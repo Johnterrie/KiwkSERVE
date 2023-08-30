@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import useTogglePassword from "./useTogglePassword";
 import axios from "axios";
-import List from "../List/App";
 import { Link } from "react-router-dom";
+import UserDashBoard from "../userDashboard/App"
+
+
 
 export const Register = (props) => {
   const [email, setEmail] = useState("");
@@ -26,18 +28,19 @@ export const Register = (props) => {
     }
 
     try {
-      // const response = await axios.post("http://localhost:8080/usersignup", {
-      //     fullName: name,
-      //     email: email,
-      //     password: pass
-      // }).then((response) => response.data);
+      const response = await axios.post("http://localhost:8080/usersignup", {
+          fullName: name,
+          email: email,
+          password: pass
+      }).then((response) => response.data);
       setResponse(true);
-      // setData(response)
-      // console.log("form submitted Successfully");
+      setData(response)
     } catch (e) {
       console.log("Error: " + e.message);
     }
   };
+
+  console.log(data)
 
   const loginPage = () => {
     return (
@@ -83,9 +86,8 @@ export const Register = (props) => {
           <span>{error}</span>
           <span>{success}</span>
 
-          <Link to="/userdashboard">
-            <button type="submit">Sign Up</button>
-          </Link>
+          <button onClick={handleSubmit} type="submit">Sign Up</button>
+          
 
         </form>
         <div className="link-btn" onClick={() => props.onFormSwitch("login")}>
@@ -97,5 +99,5 @@ export const Register = (props) => {
 
   console.log(data);
 
-  return <div>{response ? <List list={data} /> : loginPage()}</div>;
+  return <div>{response ? <UserDashBoard data = {data} /> : loginPage()}</div>;
 };

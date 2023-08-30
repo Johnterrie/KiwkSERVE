@@ -1,5 +1,10 @@
 .main {
   display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  width: 75vw;
+  position: relative;
+  top: 0;
 }
 
 h2 {
@@ -7,7 +12,10 @@ h2 {
   padding-top: 4vh;
   color: white;
   margin-top: 5vh;
-  /* font-size: 2.3vw; */
+}
+
+.App-ish {
+  border: 1px solid red;
 }
 
 .sidebar {
@@ -53,16 +61,14 @@ a {
 .top-bar {
   width: 73vw;
   height: 15vh;
-  margin-left: 1vw;
-  margin-top: 3vh;
   border-radius: 0.5vw;
   background-color: #1B6392;
   display: flex;
 }
 
 .main-bar {
-  width: 82vw;
-  height: 97vh;
+  width: 80vw;
+  height: 90vh;
   margin-left: 0.5vw;
 }
 
@@ -131,7 +137,6 @@ h4 {
   height: 28vh;
   background-color: #1B6392;
   margin-top: 8vh;
-  margin-left: 4vw;
   color: white;
   font-size: 3vw;
   border-radius: 1vw;
@@ -233,7 +238,6 @@ h5 {
 .vertical-line::before {
   content: "";
   position: absolute;
-  margin-left: 10px;
   height: 5vh;
   width: 1px; 
   margin-top: 4.5vh;

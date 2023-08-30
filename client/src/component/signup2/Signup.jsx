@@ -28,7 +28,7 @@ const Signup = () => {
   const marginTop = { marginTop: 5 };
 
   const [data, setData] = useState("");
-  const [response, setResponse] = useState(true);
+  const [response, setResponse] = useState(false);
 
   const initialValues = {
     firstName: "",
@@ -44,11 +44,9 @@ const Signup = () => {
 
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().min(3, "It's too short").required("Required"),
-    lastName: Yup.string().min(3, "It's too short").required("Required"),
-    occupation: Yup.string().min(3, "It's too short").required("Required"),
+    profession: Yup.string().min(3, "It's too short").required("Required"),
     location: Yup.string().min(3, "It's too short").required("Required"),
     email: Yup.string().email("Enter valid email").required("Required"),
-    gender: Yup.string().oneOf(["male", "female"], "Requred"),
     phoneNumber: Yup.string()
       .required()
       .matches(/^[0-9]+$/, "Must be only digits")
@@ -62,8 +60,12 @@ const Signup = () => {
       .required("Required"),
   });
 
-  const onSubmit = async (values, props) => {
+  const onSubmit = async (value, props) => {
+
+    const { values } = value
+
     console.log(values);
+
     setTimeout(() => {
       props.resetForm();
       props.setSubmitting(false);
@@ -103,26 +105,14 @@ const Signup = () => {
                 <Field
                   as={TextField}
                   fullWidth
-                  name="firstName"
-                  label="First Name"
+                  name="name"
+                  label="Name"
                   type="text"
                   variant="standard"
                   placeholder="Enter your first name"
                   helperText={<ErrorMessage name="firstName" />}
                   gutterBottom
                 />
-                <Field
-                  as={TextField}
-                  fullWidth
-                  name="lastName"
-                  label="Last Name"
-                  type="text"
-                  variant="standard"
-                  placeholder="Enter your last name"
-                  helperText={<ErrorMessage name="lastName" />}
-                  gutterBottom
-                />
-
                 <Field
                   as={TextField}
                   fullWidth
@@ -159,29 +149,6 @@ const Signup = () => {
                   gutterBottom
                 />
 
-                <FormControl>
-                  <Field as={FormLabel} id="radio-buttons-group-label">
-                    Gender
-                  </Field>
-                  <RadioGroup
-                    style={{ display: "initial" }}
-                    aria-labelledby="radio-buttons-group-label"
-                    // defaultValue="female"
-                    // name="radio-buttons-group"
-                    name="gender"
-                  >
-                    <FormControlLabel
-                      value="female"
-                      control={<Radio />}
-                      label="Female"
-                    />
-                    <FormControlLabel
-                      value="male"
-                      control={<Radio />}
-                      label="Male"
-                    />
-                  </RadioGroup>
-                </FormControl>
                 <Field
                   as={TextField}
                   fullWidth
@@ -236,7 +203,7 @@ const Signup = () => {
   };
 
   return <div>
-    {response ? <ProfessionalDashboard/> : loginPage}
+    {response ? <ProfessionalDashboard/> : loginPage()}
     </div>;
 };
 
